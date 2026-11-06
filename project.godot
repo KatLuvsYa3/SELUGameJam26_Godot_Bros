@@ -21,8 +21,11 @@ BaseScript="*uid://dls86guu8gto5"
 
 [display]
 
+window/size/viewport_width=1536
+window/size/viewport_height=864
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/stretch/scale=6.0
 
 [dotnet]
 
@@ -34,4 +37,5 @@ project/assembly_name="SELUGameJam26"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
