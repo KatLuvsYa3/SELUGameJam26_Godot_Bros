@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://lapx2t7jbglp"]
 
+[ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_x27kw"]
+
 [node name="main" type="Node2D" unique_id=1067264169]
+
+[node name="Viewport Background" type="Sprite2D" parent="." unique_id=151275082]
+z_index = -1
+position = Vector2(128, 72)
+texture = ExtResource("1_x27kw")
