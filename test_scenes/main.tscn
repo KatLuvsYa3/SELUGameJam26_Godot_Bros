@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://lapx2t7jbglp"]
 
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_x27kw"]
+[ext_resource type="Script" uid="uid://biqnxmdivhtsg" path="res://scripts/combat_test_button.gd" id="2_l65i7"]
 
 [node name="main" type="Node2D" unique_id=1067264169]
 
@@ -8,3 +9,13 @@
 z_index = -1
 position = Vector2(128, 72)
 texture = ExtResource("1_x27kw")
+
+[node name="Button" type="Button" parent="." unique_id=877091013]
+offset_left = 26.0
+offset_top = 30.0
+offset_right = 127.0
+offset_bottom = 61.0
+text = "combat test"
+script = ExtResource("2_l65i7")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

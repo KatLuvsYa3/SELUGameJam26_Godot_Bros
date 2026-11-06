@@ -12,6 +12,7 @@ func _ready() -> void:
 	audio_controller = get_child(0)
 
 func start_combat_scene(scene):
+	get_tree().root.get_child(1).queue_free()
 	get_tree().change_scene_to_file(scene)
 	add_child(combat_ui_scene)
 	combat_ui_scene = get_children(get_child_count()-1)
