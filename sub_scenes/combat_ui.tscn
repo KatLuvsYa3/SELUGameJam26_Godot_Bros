@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dfaovm7loumrr" path="res://sprites/d6 sprites/6.png" id="8_d3adr"]
 [ext_resource type="Script" uid="uid://b33kq58h4wpbs" path="res://scripts/heart_group.gd" id="9_41hxt"]
 [ext_resource type="Texture2D" uid="uid://bhk0b7aabsm75" path="res://sprites/combat_ui/heart.png" id="10_exmyt"]
+[ext_resource type="Texture2D" uid="uid://djtvqmtc30p82" path="res://sprites/combat_ui/mistystep.png" id="11_exmyt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m0i5l"]
 animations = [{
@@ -41,6 +42,7 @@ animations = [{
 z_index = 50
 
 [node name="Viewport Background" type="Sprite2D" parent="." unique_id=356010732]
+visible = false
 z_index = -1
 position = Vector2(128, 72)
 texture = ExtResource("1_2jgrd")
@@ -75,3 +77,7 @@ position = Vector2(145, 136)
 texture = ExtResource("10_exmyt")
 
 [node name="empty" type="Sprite2D" parent="HeartGroup/3" unique_id=1756820336]
+
+[node name="Mistystep" type="Sprite2D" parent="." unique_id=1258905247]
+position = Vector2(172, 127)
+texture = ExtResource("11_exmyt")
