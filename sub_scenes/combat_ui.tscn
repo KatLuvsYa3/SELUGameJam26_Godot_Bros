@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxirlmvqbt2tg"]
 
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_2jgrd"]
-[ext_resource type="Texture2D" uid="uid://b0t8dykv0fiij" path="res://sprites/dicepanel.png" id="2_nveh0"]
+[ext_resource type="Texture2D" uid="uid://d2llylyfd4oh1" path="res://sprites/dicepanel.png" id="2_nveh0"]
 [ext_resource type="Texture2D" uid="uid://c4u12n55uad4c" path="res://sprites/d6 sprites/1.png" id="3_1d50l"]
 [ext_resource type="Texture2D" uid="uid://cag6hja7ahr58" path="res://sprites/d6 sprites/2.png" id="4_bhf1w"]
 [ext_resource type="Texture2D" uid="uid://c12wd1ppdu35w" path="res://sprites/d6 sprites/3.png" id="5_41hxt"]
@@ -80,6 +80,7 @@ texture = ExtResource("12_7ry47")
 position = Vector2(130, 136)
 
 [node name="empty" type="Sprite2D" parent="HeartGroup/2" unique_id=720249833]
+z_index = -2
 texture = ExtResource("12_7ry47")
 
 [node name="full" type="Sprite2D" parent="HeartGroup/2" unique_id=1135152973]
@@ -92,15 +93,16 @@ texture = ExtResource("11_d3adr")
 [node name="3" type="Node2D" parent="HeartGroup" unique_id=292211430]
 position = Vector2(145, 136)
 
-[node name="empty" type="Sprite2D" parent="HeartGroup/3" unique_id=1756820336]
-texture = ExtResource("12_7ry47")
+[node name="half" type="Sprite2D" parent="HeartGroup/3" unique_id=1877999307]
+z_index = -1
+texture = ExtResource("11_d3adr")
 
 [node name="full" type="Sprite2D" parent="HeartGroup/3" unique_id=1383328391]
 texture = ExtResource("10_exmyt")
 
-[node name="half" type="Sprite2D" parent="HeartGroup/3" unique_id=1877999307]
-z_index = -1
-texture = ExtResource("11_d3adr")
+[node name="empty" type="Sprite2D" parent="HeartGroup/3" unique_id=1756820336]
+z_index = -2
+texture = ExtResource("12_7ry47")
 
 [node name="Mistystep" type="Sprite2D" parent="." unique_id=1258905247]
 position = Vector2(172, 127)
