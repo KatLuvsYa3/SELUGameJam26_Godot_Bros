@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://jvx7gxcq2386"]
+
+[ext_resource type="Script" uid="uid://cknds2ifqo0xf" path="res://scripts/audio_stream_player.gd" id="1_x8evc"]
+
+[node name="AudioScene" type="Node2D" unique_id=333936469]
+script = ExtResource("1_x8evc")
+
+[node name="BGMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1460991369]

@@ -49,4 +49,4 @@ func play_sound_from_tag(tag: String) -> void:
 #test function
 #func _input(_ev):
 	#if Input.is_key_pressed(KEY_K):
-		#play_sound_from_tag("spoopy")
+		#play_sound_from_tag("button")
