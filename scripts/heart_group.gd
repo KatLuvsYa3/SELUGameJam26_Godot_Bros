@@ -5,18 +5,28 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$"1".visible = true
-	$"2".visible = true
-	$"3".visible = true
+	pass
 
 # ONLY ACCEPTS 0-6
 func set_hp(x: int):
-	$"1".visible = false
-	$"2".visible = false
-	$"3".visible = false
-	if x > 0: $"1".visible = true
-	if x > 1: $"2".visible = true
-	if x > 2: $"3".visible = true
+	$"1/full".visible = false
+	$"1/half".visible = false
+	$"1/empty".visible = true
+	
+	$"2/full".visible = false
+	$"2/half".visible = false
+	$"2/empty".visible = true
+	
+	$"3/full".visible = false
+	$"3/half".visible = false
+	$"3/empty".visible = true
+	
+	if x > 0: $"1/half".visible = true
+	if x > 1: $"1/full".visible = true
+	if x > 2: $"2/half".visible = true
+	if x > 3: $"2/full".visible = true
+	if x > 4: $"3/half".visible = true
+	if x > 5: $"3/full".visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
