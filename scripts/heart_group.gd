@@ -9,7 +9,7 @@ func _ready() -> void:
 	$"2".visible = true
 	$"3".visible = true
 
-# ONLY ACCEPTS 0-3
+# ONLY ACCEPTS 0-6
 func set_hp(x: int):
 	$"1".visible = false
 	$"2".visible = false
