@@ -51,7 +51,7 @@ func _physics_process(delta: float) -> void:
 		input_dir += Vector2.DOWN
 	if Input.is_key_pressed(KEY_D):
 		input_dir += Vector2.RIGHT
-	velocity += input_dir.normalized()*((1-delta)*speed)
+	velocity = input_dir.normalized()*((1-delta)*speed*50)
 	look_at(get_global_mouse_position())
 	
 	# misty step
@@ -62,7 +62,7 @@ func _physics_process(delta: float) -> void:
 		if dash_distance > get_global_mouse_position().distance_to(global_position):
 			global_position = get_global_mouse_position()
 		else: 
-			velocity += (get_global_mouse_position()-global_position).normalized()*dash_distance
+			velocity += (get_global_mouse_position()-global_position).normalized()*dash_distance*50
 		dash.emitting = true
 	
 	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
@@ -75,7 +75,7 @@ func _physics_process(delta: float) -> void:
 	#check_tile_effects()
 	
 	move_and_slide()
-	velocity*=0.99*(1-delta)
+	#velocity*=0.99*(1-delta)
 
 #func check_tile_effects():
 	## Convert player position to tile map coordinates
@@ -90,18 +90,18 @@ var firebolt_scene = preload("res://sub_scenes/spells/Firebolt.tscn")
 
 func cast_cantrip():
 	var new_firebolt = firebolt_scene.instantiate()
-	new_firebolt.rotation = last_rotation
-	new_firebolt.position = player.global_position
+	new_firebolt.rotation = rotation
+	new_firebolt.position = global_position
 	new_firebolt.speed = cantrip_speed
-	get_parent().add_child(new_firebolt)
+	get_parent().get_parent().add_child(new_firebolt)
 
 func cast_spell():
 	var power = await BaseScript.combat_ui.roll()
 	var spell = selected_spell_scene.instantiate()
 	spell.visible = false
 	spell.set_power(power)
-	spell.player = get_child(0).get_child(0)
-	get_parent().add_child(spell)
+	spell.player = self
+	get_parent().get_parent().add_child(spell)
 	spell.start = true
 
 func _input(event):
