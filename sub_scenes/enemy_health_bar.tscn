@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dwh4lrprtri5u"]
+
+[ext_resource type="Script" uid="uid://dq6xuhfgi4sk7" path="res://scripts/enemy_health_bar.gd" id="1_uhl53"]
+[ext_resource type="Texture2D" uid="uid://irxk1s7xu0c" path="res://sprites/emptyhpbar.png" id="2_80174"]
+[ext_resource type="Texture2D" uid="uid://bbkb16cxwi0me" path="res://sprites/fullhpbar.png" id="3_hpfcr"]
+
+[node name="EnemyHealthBar" type="Node2D" unique_id=2141379282]
+scale = Vector2(0.8, 0.2)
+script = ExtResource("1_uhl53")
+
+[node name="Bar" type="TextureProgressBar" parent="." unique_id=1005137981]
+offset_left = -16.0
+offset_top = -33.333332
+offset_right = 16.0
+offset_bottom = -17.333332
+texture_under = ExtResource("2_80174")
+texture_progress = ExtResource("3_hpfcr")
