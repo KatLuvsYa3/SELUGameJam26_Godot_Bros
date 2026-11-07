@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bm4k4hst0vvgd" path="res://scripts/burning_hands.gd" id="1_kgey7"]
 
 [node name="BurningHands" type="Node2D" unique_id=1176786116]
+z_index = -1
 script = ExtResource("1_kgey7")
 
 [node name="Burninghands" type="Sprite2D" parent="." unique_id=1556243422]
