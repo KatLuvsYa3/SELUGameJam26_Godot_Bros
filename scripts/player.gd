@@ -109,5 +109,5 @@ func _input(event):
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.get_node("Player"):
+	if area.has_node("Player"):
 		hp -= 1

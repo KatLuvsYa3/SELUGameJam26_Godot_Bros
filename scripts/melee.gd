@@ -21,7 +21,7 @@ func move(delta: float, playerpos: Vector2):
 
 
 func on_hitbox_collide(area: Area2D) -> void:
-	if area.get_node("Firebolt"):
+	if area.has_node("Firebolt"):
 		health -= 10
 	
 		
