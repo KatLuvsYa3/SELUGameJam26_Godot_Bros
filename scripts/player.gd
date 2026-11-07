@@ -45,4 +45,7 @@ func _process(delta: float) -> void:
 		player.position += Vector2.from_angle(last_rotation)*dash_distance
 		$Player/MistyStepP.emitting = true
 	
-	#BaseScript.combat_ui
+	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
+	
+	# display hp
+	BaseScript.combat_ui.update_hp(hp)

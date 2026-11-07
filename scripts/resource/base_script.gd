@@ -25,7 +25,7 @@ func start_combat_scene(scene):
 	get_tree().change_scene_to_file(scene)
 	if !isincombat_scene: 
 		add_child(combat_ui_scene)
-		combat_ui_scene = get_children(get_child_count()-1)
+		combat_ui = get_child(get_child_count()-1)
 	isincombat_scene = true
 
 func exit_combat_scene():
