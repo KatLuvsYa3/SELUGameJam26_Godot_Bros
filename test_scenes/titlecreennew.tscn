@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b2hauehgsr1tm" path="res://scripts/main.gd" id="1_ot0ld"]
 [ext_resource type="FontFile" uid="uid://bgrqlvqn6ypgj" path="res://test_scenes/GothicByte.ttf" id="2_fd305"]
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="3_qonts"]
+[ext_resource type="Texture2D" uid="uid://dnh1c4v2f4fto" path="res://sprites/titlescreen.png" id="4_fd305"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nwpmh"]
 
@@ -12,6 +13,7 @@
 script = ExtResource("1_ot0ld")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1670212204]
+visible = false
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
@@ -75,5 +77,10 @@ z_index = -1
 position = Vector2(128, 72)
 texture = ExtResource("3_qonts")
 metadata/_edit_lock_ = true
+
+[node name="Titlescreen" type="Sprite2D" parent="." unique_id=1134516642]
+z_index = -1
+position = Vector2(128, 72)
+texture = ExtResource("4_fd305")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
