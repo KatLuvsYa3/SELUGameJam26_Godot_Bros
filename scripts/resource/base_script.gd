@@ -22,6 +22,12 @@ func _ready() -> void:
 	player = player_scene
 	
 
+func end_game():
+	get_tree().root.get_child(1).free()
+	get_child(1).free()
+	isincombat_scene = false
+	get_tree().change_scene_to_file("res://sub_scenes/death.tscn")
+
 func start_scene(scene):
 	get_tree().root.get_child(1).queue_free()
 	get_tree().change_scene_to_file(scene)
@@ -32,6 +38,7 @@ func combat_ui_enable():
 	isincombat_scene = true
 
 func start_combat_scene(scene):
+	BaseScript.audio_controller.play_sound_from_tag("fight_theme")
 	get_tree().root.get_child(1).queue_free()
 	get_tree().change_scene_to_file(scene)
 	if !isincombat_scene: 

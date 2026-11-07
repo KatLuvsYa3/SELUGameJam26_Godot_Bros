@@ -1,7 +1,7 @@
 extends Node2D
 
 var type = Enemy.Type.MELEE
-@onready var enemy = $Area2D/Sprite2D
+@onready var enemy = $Area2D/Enemy
 @export var health: float = Enemy.enemyHealth[type]
 @export var speed: float = Enemy.enemySpeed[type]
 @export var damage: float = Enemy.enemyDamage[type]
@@ -25,7 +25,8 @@ func lookAt(playerpos: Vector2):
 
 func on_hitbox_collide(area: Area2D) -> void:
 	if area.has_node("Firebolt"):
-		health -= 10
+		health -= area.get_meta("Damage")
 	
 	if area.has_node("Burninghands"):
-		health -= 5
+		health -= area.get_meta("Damage")
+	

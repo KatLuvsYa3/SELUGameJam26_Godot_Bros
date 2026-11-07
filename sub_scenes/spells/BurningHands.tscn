@@ -11,9 +11,11 @@ script = ExtResource("1_kgey7")
 position = Vector2(28, 0)
 rotation = 3.1415927
 scale = Vector2(1, -1)
+metadata/Damage = 0
 
 [node name="Burninghands" type="Sprite2D" parent="Area2D" unique_id=1556243422]
 texture = ExtResource("1_3lwl0")
+metadata/damage = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=750856576]
 polygon = PackedVector2Array(16, -1, -23, -25, -24, 25)
