@@ -18,10 +18,13 @@ script = ExtResource("1_vo3rv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=243024605]
 
+<<<<<<< Updated upstream
 [node name="Player" type="Sprite2D" parent="Area2D" unique_id=1263607671]
+=======
+[node name="Player" type="Sprite2D" parent="Area2D" unique_id=1311271076]
+>>>>>>> Stashed changes
 z_index = 4
 position = Vector2(-6, 0)
-rotation = 3.1415927
 scale = Vector2(-1, 1)
 texture = ExtResource("2_72usq")
 
@@ -30,7 +33,7 @@ texture = ExtResource("2_72usq")
 [node name="MistyStepP" type="CPUParticles2D" parent="Area2D/Player" unique_id=1821018125]
 z_index = -1
 position = Vector2(-6, 0)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(1, -1)
 emitting = false
 texture = ExtResource("3_72usq")
