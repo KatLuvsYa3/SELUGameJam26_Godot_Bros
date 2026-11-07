@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dmwjdiaq6t00w"]
 
 [ext_resource type="Script" uid="uid://diysk327jqj2u" path="res://scripts/player.gd" id="1_vo3rv"]
-[ext_resource type="Texture2D" uid="uid://dcl0usxcy8fgi" path="res://sprites/player.png" id="2_72usq"]
 [ext_resource type="Texture2D" uid="uid://btupi2cmt4fqg" path="res://sprites/mistystepsparkle.png" id="3_72usq"]
 
 [sub_resource type="Gradient" id="Gradient_w17ly"]
@@ -18,19 +17,17 @@ script = ExtResource("1_vo3rv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=243024605]
 
-[node name="Player" type="Sprite2D" parent="Area2D" unique_id=1263607671]
+[node name="Player" type="CharacterBody2D" parent="Area2D" unique_id=2062372897]
 z_index = 4
 position = Vector2(-6, 0)
-rotation = 3.1415927
-scale = Vector2(-1, 1)
-texture = ExtResource("2_72usq")
+scale = Vector2(1, -1)
 
 [node name="Camera2D" type="Camera2D" parent="Area2D/Player" unique_id=756907425]
 
 [node name="MistyStepP" type="CPUParticles2D" parent="Area2D/Player" unique_id=1821018125]
 z_index = -1
 position = Vector2(-6, 0)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(1, -1)
 emitting = false
 texture = ExtResource("3_72usq")
@@ -48,6 +45,10 @@ linear_accel_min = 0.5
 linear_accel_max = 0.5
 color_ramp = SubResource("Gradient_w17ly")
 color_initial_ramp = SubResource("Gradient_72usq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Player" unique_id=256232793]
+position = Vector2(-7, 0)
+shape = SubResource("CircleShape2D_72usq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=912589245]
 position = Vector2(-7, 0)

@@ -70,3 +70,5 @@ position = Vector2(299, 184)
 position = Vector2(325, 182)
 
 [node name="Tank" type="Node2D" parent="SpawnPoints" unique_id=1512334753]
+
+[node name="Holes" type="Node2D" parent="." unique_id=501793577]

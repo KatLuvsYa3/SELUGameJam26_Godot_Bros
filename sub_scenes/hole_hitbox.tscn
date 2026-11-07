@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://2b6sgv6d08dp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0i5l"]
+size = Vector2(16, 16)
+
+[node name="HoleHitbox" type="Node2D" unique_id=1501376788]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=98325258]
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=831658511]
+shape = SubResource("RectangleShape2D_m0i5l")
