@@ -53,8 +53,7 @@ animations = [{
 "speed": 24.0
 }]
 
-[node name="CombatUi" type="Node2D" unique_id=798443005]
-z_index = 50
+[node name="CombatUi" type="CanvasLayer" unique_id=1723233813]
 script = ExtResource("1_0n2b7")
 
 [node name="Viewport Background" type="Sprite2D" parent="." unique_id=356010732]

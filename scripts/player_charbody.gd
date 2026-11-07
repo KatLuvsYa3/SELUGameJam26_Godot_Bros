@@ -66,7 +66,6 @@ func _physics_process(delta: float) -> void:
 		dash.emitting = true
 	
 	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
-	BaseScript.combat_ui.position = player.position
 	# display hp
 	BaseScript.combat_ui.update_hp(hp)
 	# display spell
