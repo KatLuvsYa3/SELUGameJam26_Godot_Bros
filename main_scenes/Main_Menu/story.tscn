@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cvxj6en26mkfj"]
+
+[ext_resource type="Script" uid="uid://dl2qt6lgxg8tj" path="res://main_scenes/Main_Menu/story.gd" id="1_rbaf0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cwjor"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rbaf0"]
+
+[node name="Node2D" type="Node2D" unique_id=1593822033]
+script = ExtResource("1_rbaf0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=413547957]
+modulate = Color(0.210037, 0.42277315, 0.23270017, 1)
+self_modulate = Color(0.32501206, 0, 0.034372117, 1)
+show_behind_parent = true
+material = SubResource("ShaderMaterial_cwjor")
+offset_right = 256.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_rbaf0")
+
+[node name="StoryLabel" type="Label" parent="." unique_id=1878230268]
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 256.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 6
+text = "One stormy night, whilst the great spellcaster was sleeping after countless restless nights, malevolent goblins raided his tower. Once he arose during the night the goblins were already far gone. The storm thickened throughout the night, lightning was striking without any signs of stopping. He had quickly noticed his most prized possession, along with countless other artifacts stolen. The spellcaster’s wand, forged with perfection & infused with a tremendous amount of mana, the wand that ruled the land and locked the goblin king away, was stolen."
+autowrap_mode = 2
+
+[node name="NextButton" type="Button" parent="." unique_id=1801078275]
+offset_left = 214.0
+offset_top = 97.0
+offset_right = 252.0
+offset_bottom = 154.0
+theme_override_font_sizes/font_size = 35
+text = "⇒"
+flat = true

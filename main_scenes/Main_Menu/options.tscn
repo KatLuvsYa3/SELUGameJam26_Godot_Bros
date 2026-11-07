@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://12sypk74lgvc"]
 
-[ext_resource type="Script" uid="uid://dqhlxrnnc7u78" path="res://test_scenes/options.gd" id="1_yeiiq"]
+[ext_resource type="Script" uid="uid://dqhlxrnnc7u78" path="res://main_scenes/Main_Menu/options.gd" id="1_yeiiq"]
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="2_3mo85"]
-[ext_resource type="FontFile" uid="uid://bgrqlvqn6ypgj" path="res://test_scenes/GothicByte.ttf" id="2_hgrw2"]
+[ext_resource type="FontFile" uid="uid://bgrqlvqn6ypgj" path="res://main_scenes/Main_Menu/GothicByte.ttf" id="2_hgrw2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6sqss"]
 

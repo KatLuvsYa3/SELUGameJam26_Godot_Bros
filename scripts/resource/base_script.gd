@@ -22,6 +22,11 @@ func _ready() -> void:
 	player = player_scene
 	audio_controller.play_sound_from_tag("ambient")
 	
+
+func start_scene(scene):
+	get_tree().root.get_child(1).queue_free()
+	get_tree().change_scene_to_file(scene)
+
 func combat_ui_enable():
 	add_child(combat_ui_scene)
 	combat_ui = get_child(get_child_count()-1)

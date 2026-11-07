@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://3uws0nwfefr"
-path="res://.godot/imported/PinyonScript-Regular.ttf-fd3492a7e0a8eb39fa6341cccc9a82b4.fontdata"
+uid="uid://bgrqlvqn6ypgj"
+path="res://.godot/imported/GothicByte.ttf-fc4efd50b296249fb2af808244225ff7.fontdata"
 
 [deps]
 
-source_file="res://test_scenes/PinyonScript-Regular.ttf"
-dest_files=["res://.godot/imported/PinyonScript-Regular.ttf-fd3492a7e0a8eb39fa6341cccc9a82b4.fontdata"]
+source_file="res://main_scenes/Main_Menu/GothicByte.ttf"
+dest_files=["res://.godot/imported/GothicByte.ttf-fc4efd50b296249fb2af808244225ff7.fontdata"]
 
 [params]
 

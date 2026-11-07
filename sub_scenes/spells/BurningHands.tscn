@@ -7,12 +7,13 @@
 z_index = -1
 script = ExtResource("1_kgey7")
 
-[node name="Burninghands" type="Sprite2D" parent="." unique_id=1556243422]
+[node name="Area2D" type="Area2D" parent="." unique_id=543295043]
 position = Vector2(28, 0)
-scale = Vector2(-1, 1)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Burninghands" type="Sprite2D" parent="Area2D" unique_id=1556243422]
 texture = ExtResource("1_3lwl0")
 
-[node name="Area2D" type="Area2D" parent="Burninghands" unique_id=543295043]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Burninghands/Area2D" unique_id=750856576]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=750856576]
 polygon = PackedVector2Array(16, -1, -23, -25, -24, 25)

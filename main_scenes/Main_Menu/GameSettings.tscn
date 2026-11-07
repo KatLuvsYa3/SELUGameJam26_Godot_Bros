@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dfkr47xe381uu"]
+
+[ext_resource type="Script" uid="uid://dl2qt6lgxg8tj" path="res://main_scenes/Main_Menu/story.gd" id="1_h6mch"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3oob7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_h6mch"]
+
+[node name="Node2D" type="Node2D" unique_id=1339944749]
+script = ExtResource("1_h6mch")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=26672044]
+modulate = Color(0.210037, 0.42277315, 0.23270017, 1)
+self_modulate = Color(0.32501206, 0, 0.034372117, 1)
+show_behind_parent = true
+material = SubResource("ShaderMaterial_3oob7")
+offset_right = 256.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_h6mch")

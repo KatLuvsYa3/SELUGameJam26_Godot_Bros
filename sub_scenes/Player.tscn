@@ -18,6 +18,7 @@ offsets = PackedFloat32Array(0, 0.0024630541)
 [node name="Player" type="CharacterBody2D" parent="." unique_id=590949251]
 script = ExtResource("2_w17ly")
 
+<<<<<<< HEAD
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=1643108989]
 position = Vector2(-7, 0)
 shape = SubResource("CircleShape2D_72usq")
@@ -25,6 +26,13 @@ shape = SubResource("CircleShape2D_72usq")
 [node name="Area2D" type="Area2D" parent="Player" unique_id=243024605]
 
 [node name="Player" type="Sprite2D" parent="Player/Area2D" unique_id=1263607671]
+=======
+<<<<<<< Updated upstream
+[node name="Player" type="Sprite2D" parent="Area2D" unique_id=1263607671]
+=======
+[node name="Player" type="Sprite2D" parent="Area2D" unique_id=1311271076]
+>>>>>>> Stashed changes
+>>>>>>> 87107dc631486da97cb5b9e093db7c3c8c035a26
 z_index = 4
 position = Vector2(-6, 0)
 scale = Vector2(-1, 1)
