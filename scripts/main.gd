@@ -13,6 +13,6 @@ func _on_play_pressed() -> void:
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://main_scenes/Main_Menu/options.tscn")
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://menu_scenes/Main_Menu/credits.tscn")
+	get_tree().change_scene_to_file("res://main_scenes/Main_Menu/credits.tscn")
 func _on_quitgame_pressed() -> void:
 	get_tree().quit()
