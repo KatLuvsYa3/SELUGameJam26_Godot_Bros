@@ -2,12 +2,20 @@ extends Node2D
 
 var last_rotation = 0
 @onready var player: Sprite2D = $Player
-#movement 
+
+# movement 
 @export var speed = 1.5
 @export var dash_cooldown = 2.0
 @export var dash_timer = 0
 @export var dash_distance = 60
 
+# spell
+@export var cantrip_cooldown = 0.5
+@export var cantrip_timer = 0.0
+@export var spell_cooldown = 4.0
+@export var spell_timer = 0.0
+
+# stats
 @export var max_hp = 6
 @export var hp = 6
 
@@ -19,6 +27,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	spell_timer += delta
+	cantrip_timer += delta
 	# walk
 	var input_dir = Vector2.ZERO
 	if Input.is_key_pressed(KEY_W):
@@ -49,3 +59,18 @@ func _process(delta: float) -> void:
 	BaseScript.combat_ui.position = player.position
 	# display hp
 	BaseScript.combat_ui.update_hp(hp)
+
+func cast_cantrip():
+	pass
+
+func cast_spell():
+	pass
+
+func _input(event):
+	# Mouse in viewport coordinates.
+	if event is InputEventMouseButton:
+		if spell_timer <= spell_cooldown and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			cast_spell()
+		elif cantrip_timer <= cantrip_cooldown and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			cast_cantrip()
+	
