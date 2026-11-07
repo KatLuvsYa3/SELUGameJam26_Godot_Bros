@@ -8,7 +8,7 @@ var player
 var enemies = []
 var direction
 func _ready():
-	
+	BaseScript.combat_ui_enable()
 	enemies = BaseScript.place_enemies(enemyContainer, spawnPoints)
 	player = BaseScript.place_player(playerContainer, BaseScript.viewport_width/2.0, BaseScript.viewport_height/2.0)
 	

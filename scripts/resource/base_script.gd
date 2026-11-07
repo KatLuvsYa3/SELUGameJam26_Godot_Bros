@@ -20,6 +20,8 @@ func _ready() -> void:
 	add_child(audio_controller_scene)
 	audio_controller = get_child(0)
 	player = player_scene
+	
+func combat_ui_enable():
 	add_child(combat_ui_scene)
 	combat_ui = get_child(get_child_count()-1)
 	isincombat_scene = true
