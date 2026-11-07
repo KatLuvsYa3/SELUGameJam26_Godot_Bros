@@ -26,12 +26,14 @@ func win_game():
 	get_tree().root.get_child(1).queue_free()
 	combat_ui.visible = false
 	isincombat_scene = false
+	audio_controller.play_sound_from_tag("win")
 	get_tree().change_scene_to_file("res://sub_scenes/win.tscn")
 
 func end_game():
 	get_tree().root.get_child(1).queue_free()
 	combat_ui.visible = false
 	isincombat_scene = false
+	audio_controller.play_sound_from_tag("loss")
 	get_tree().change_scene_to_file("res://sub_scenes/death.tscn")
 
 func start_scene(scene):
