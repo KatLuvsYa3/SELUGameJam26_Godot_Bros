@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cfe5pe723ji8e"]
+
+[ext_resource type="FontFile" uid="uid://bgrqlvqn6ypgj" path="res://test_scenes/GothicByte.ttf" id="1_swpab"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1okw"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lrf63"]
+
+[node name="Node2D" type="Node2D" unique_id=2049887063]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1776870095]
+modulate = Color(0.210037, 0.42277315, 0.23270017, 1)
+self_modulate = Color(0.32501206, 0, 0.034372117, 1)
+show_behind_parent = true
+material = SubResource("ShaderMaterial_e1okw")
+offset_right = 256.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_lrf63")
+
+[node name="Label" type="Label" parent="." unique_id=1063230635]
+offset_left = 102.0
+offset_top = 3.0
+offset_right = 147.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("1_swpab")
+theme_override_font_sizes/font_size = 20
+text = "Rules"

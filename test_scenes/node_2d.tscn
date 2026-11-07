@@ -76,4 +76,18 @@ position = Vector2(128, 72)
 texture = ExtResource("1_lg5f7")
 metadata/_edit_lock_ = true
 
+[node name="Label" type="Label" parent="." unique_id=173387523]
+offset_right = 168.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 28
+text = "Spellcaster's"
+
+[node name="Label2" type="Label" parent="." unique_id=8462107]
+offset_left = 1.0
+offset_top = 31.0
+offset_right = 161.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 28
+text = "Vengeance"
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
