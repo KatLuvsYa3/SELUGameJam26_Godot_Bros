@@ -22,6 +22,12 @@ func _ready() -> void:
 	player = player_scene
 	audio_controller.play_sound_from_tag("bootup")
 
+func win_game():
+	get_tree().root.get_child(1).free()
+	get_child(1).free()
+	isincombat_scene = false
+	get_tree().change_scene_to_file("res://sub_scenes/win.tscn")
+
 func end_game():
 	get_tree().root.get_child(1).free()
 	get_child(1).free()

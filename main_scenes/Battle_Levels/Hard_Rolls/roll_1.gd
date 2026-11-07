@@ -27,6 +27,8 @@ func _ready():
 			$Holes.add_child(hole)
 
 func _process(delta: float):
+	if enemies.size() == 0:
+		BaseScript.win_game()
 	
 	for enemy in enemies:
 		if enemy.health <= 0:
