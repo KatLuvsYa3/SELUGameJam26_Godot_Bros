@@ -8,6 +8,10 @@ var last_rotation = 0
 @export var dash_timer = 0
 @export var dash_distance = 60
 
+@export var max_hp = 6
+@export var hp = 6
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -42,3 +46,4 @@ func _process(delta: float) -> void:
 			position += input_dir.normalized()*dash_distance
 		$MistyStepP.emitting = true
 	
+	#BaseScript.combat_ui
