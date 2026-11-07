@@ -6,7 +6,7 @@ var type = Enemy.Type.TANK
 @export var speed: float = Enemy.enemySpeed[type]
 @export var damage: float = Enemy.enemyDamage[type]
 
-@onready var tank = $Area2D/Sprite2D
+@onready var tank = $Area2D/Enemy
 func move(delta: float, playerpos: Vector2):
 	var direction = global_position.direction_to(playerpos)
 	global_position += direction * speed * delta
@@ -19,3 +19,10 @@ func _ready():
 	healthBar.start(self)
 	add_child(healthBar)
 	
+
+func on_hitbox_collide(area: Area2D) -> void:
+	if area.has_node("Firebolt"):
+		health -= area.get_meta("Damage")
+	
+	if area.has_node("Burninghands"):
+		health -= area.get_meta("Damage")

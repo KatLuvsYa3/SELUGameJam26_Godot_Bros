@@ -10,9 +10,11 @@ script = ExtResource("1_at5jy")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1416520430]
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=642414836]
+[node name="Enemy" type="Sprite2D" parent="Area2D" unique_id=642414836]
 scale = Vector2(-1, 1)
 texture = ExtResource("1_b5qf1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1351411544]
 shape = SubResource("CircleShape2D_qt2xu")
+
+[connection signal="area_entered" from="Area2D" to="." method="on_hitbox_collide"]

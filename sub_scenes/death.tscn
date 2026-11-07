@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cbixa4voux30n"]
+
+[ext_resource type="Texture2D" uid="uid://ccr5u6vfkl6xx" path="res://sprites/gameoverscreen.png" id="1_xkh6e"]
+
+[node name="Death" type="Node2D" unique_id=670177753]
+
+[node name="Gameoverscreen" type="Sprite2D" parent="." unique_id=851812549]
+position = Vector2(128, 72)
+texture = ExtResource("1_xkh6e")

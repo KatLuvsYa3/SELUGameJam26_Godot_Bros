@@ -36,6 +36,7 @@ var hp = 6
 func _ready() -> void:
 	pass # Replace with function body.
 
+var push_vel = null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -60,7 +61,7 @@ func _physics_process(delta: float) -> void:
 		dash_timer = 0
 		# move
 		if dash_distance > get_global_mouse_position().distance_to(global_position):
-			global_position = get_global_mouse_position()
+			velocity = get_global_mouse_position()-global_position*50
 		else: 
 			velocity += (get_global_mouse_position()-global_position).normalized()*dash_distance*50
 		dash.emitting = true
@@ -74,7 +75,14 @@ func _physics_process(delta: float) -> void:
 	
 	#check_tile_effects()
 	
+	if push_vel != null:
+		velocity += push_vel
+		push_vel = null
+	
 	move_and_slide()
+	
+	if hp <= 0:
+		BaseScript.end_game()
 	#velocity*=0.99*(1-delta)
 
 #func check_tile_effects():
@@ -116,8 +124,12 @@ func _input(event):
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.has_node("Player"):
-		hp -= 1
+	if dash_timer > 0.05:
+		if area.has_node("Arrow"):
+			hp -= 1
+		if area.has_node("Enemy"):
+			hp -= 1
+			push_vel = (global_position-area.global_position).normalized()*700
 
 
 #func _physics_process(delta: float) -> void:

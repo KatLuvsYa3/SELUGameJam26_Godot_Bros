@@ -10,7 +10,7 @@ script = ExtResource("1_tdslv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1574262461]
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=785212684]
+[node name="Enemy" type="Sprite2D" parent="Area2D" unique_id=785212684]
 scale = Vector2(-1, 1)
 texture = ExtResource("1_mq8sj")
 

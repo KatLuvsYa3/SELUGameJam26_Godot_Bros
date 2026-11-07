@@ -9,7 +9,7 @@ var start = false
 
 func set_power(p):
 	power = p
-	damage = p*0.5
+	$Area2D.set_meta("Damage", p*5)
 	if p == 6: lifetime = 3.0 
 	else: lifetime = 1.5
 

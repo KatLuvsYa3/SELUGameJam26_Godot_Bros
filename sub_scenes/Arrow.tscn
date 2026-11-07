@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://1s85nm2m8j0b"]
+
+[ext_resource type="Script" uid="uid://ct2vh6bnjlnvn" path="res://scripts/arrow.gd" id="1_i2lld"]
+[ext_resource type="Texture2D" uid="uid://gu0x30m6juaj" path="res://sprites/arrow.png" id="2_i2lld"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t0x0m"]
+radius = 7.0
+
+[node name="Arrow" type="Node2D" unique_id=192321904]
+script = ExtResource("1_i2lld")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=541374208]
+position = Vector2(-3, 0)
+rotation = -3.1415925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1599935078]
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_t0x0m")
+
+[node name="Arrow" type="Sprite2D" parent="Area2D" unique_id=719307376]
+texture = ExtResource("2_i2lld")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

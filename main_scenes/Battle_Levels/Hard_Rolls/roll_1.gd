@@ -11,10 +11,10 @@ var direction
 var hole_scene = preload("res://sub_scenes/hole_hitbox.tscn")
 
 func _ready():
-	BaseScript.audio_controller.play_sound_from_tag("fight_theme")
-	
 	enemies = BaseScript.place_enemies(enemyContainer, spawnPoints)
 	player = BaseScript.place_player(playerContainer, BaseScript.viewport_width/2.0, BaseScript.viewport_height/2.0)
+	
+	player.global_position += Vector2.DOWN*36
 	
 	#set down collision boxes
 	var cells: Array[Vector2i] = $TileMapLayer.get_used_cells()
