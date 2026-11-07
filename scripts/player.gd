@@ -1,7 +1,7 @@
 extends Node2D
 
 var last_rotation = 0
-
+@onready var player: Sprite2D = $Player
 #movement 
 @export var speed = 1.5
 @export var dash_cooldown = 2.0
@@ -29,21 +29,20 @@ func _process(delta: float) -> void:
 		input_dir += Vector2.DOWN
 	if Input.is_key_pressed(KEY_D):
 		input_dir += Vector2.RIGHT
-	position += input_dir.normalized()*((1-delta)*speed)
-	if input_dir == Vector2.ZERO: rotation = last_rotation
-	else: 
-		last_rotation = input_dir.normalized().angle()
-		rotation = last_rotation
+	player.position += input_dir.normalized()*((1-delta)*speed)
+	#if input_dir == Vector2.ZERO: rotation = last_rotation
+	#else: 
+	#	last_rotation = input_dir.normalized().angle()
+	player.look_at(get_global_mouse_position())
+	
+	last_rotation = player.rotation
 	
 	# misty step
 	dash_timer += delta
 	if dash_timer >= dash_cooldown and Input.is_key_pressed(KEY_SPACE):
 		dash_timer = 0
 		# move
-		if input_dir == Vector2.ZERO:
-			position += Vector2.from_angle(last_rotation)*dash_distance
-		else: 
-			position += input_dir.normalized()*dash_distance
-		$MistyStepP.emitting = true
+		player.position += Vector2.from_angle(last_rotation)*dash_distance
+		$Player/MistyStepP.emitting = true
 	
 	#BaseScript.combat_ui

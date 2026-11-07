@@ -19,8 +19,13 @@ position = Vector2(-6, 0)
 scale = Vector2(-1, 1)
 texture = ExtResource("2_72usq")
 
-[node name="MistyStepP" type="CPUParticles2D" parent="." unique_id=1821018125]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=756907425]
+
+[node name="MistyStepP" type="CPUParticles2D" parent="Player" unique_id=1821018125]
 z_index = -1
+position = Vector2(-6, 0)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 emitting = false
 texture = ExtResource("3_72usq")
 lifetime = 1.57

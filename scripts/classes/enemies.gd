@@ -27,6 +27,3 @@ static func spawn(type: Type, parent: Node, pos: Vector2):
 	parent.add_child(enemy)
 	enemy.global_position = pos
 	return enemy
-	
-	
-	
