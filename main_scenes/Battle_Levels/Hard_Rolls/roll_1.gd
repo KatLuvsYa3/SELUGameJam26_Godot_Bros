@@ -19,3 +19,4 @@ func _process(delta: float):
 			enemies.erase(enemy)
 			
 		enemy.move(delta, player.global_position)
+		enemy.lookAt(player.global_position)

@@ -6,10 +6,13 @@ var type = Enemy.Type.TANK
 @export var speed: float = Enemy.enemySpeed[type]
 @export var damage: float = Enemy.enemyDamage[type]
 
+@onready var tank = $Area2D/Sprite2D
 func move(delta: float, playerpos: Vector2):
 	var direction = global_position.direction_to(playerpos)
 	global_position += direction * speed * delta
 
+func lookAt(playerpos: Vector2):
+	tank.look_at(playerpos)
 
 func _ready():
 	var healthBar = preload("res://sub_scenes/enemy_health_bar.tscn").instantiate()
