@@ -6,6 +6,7 @@ var lifetime = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	BaseScript.audio_controller.play_sound_from_tag("fire_bolt")
 	$Area2D.set_meta("Damage", 10)
 	pass # Replace with function body.
 

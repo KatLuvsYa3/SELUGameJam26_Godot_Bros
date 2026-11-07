@@ -20,7 +20,7 @@ func _ready() -> void:
 	add_child(audio_controller_scene)
 	audio_controller = get_child(0)
 	player = player_scene
-	
+	audio_controller.play_sound_from_tag("bootup")
 
 func end_game():
 	get_tree().root.get_child(1).free()

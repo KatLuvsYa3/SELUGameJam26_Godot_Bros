@@ -26,7 +26,9 @@ func lookAt(playerpos: Vector2):
 func on_hitbox_collide(area: Area2D) -> void:
 	if area.has_node("Firebolt"):
 		health -= area.get_meta("Damage")
+		BaseScript.audio_controller.play_sound_from_tag("enemy_killed")
 	
 	if area.has_node("Burninghands"):
 		health -= area.get_meta("Damage")
+		BaseScript.audio_controller.play_sound_from_tag("enemy_killed")
 	
