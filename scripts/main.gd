@@ -8,6 +8,8 @@ func _ready() -> void:
 
 func _on_play_pressed() -> void:
 	print("Play")
+	BaseScript.start_combat_scene("res://main_scenes/Battle_Levels/Easy_Rolls/Easy_Level_Test.tscn")
+
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://test_scenes/options.tscn")
 func _on_credits_pressed() -> void:
