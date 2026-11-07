@@ -62,9 +62,9 @@ func _physics_process(delta: float) -> void:
 		BaseScript.audio_controller.play_sound_from_tag("teleport")
 		# move
 		if dash_distance > get_global_mouse_position().distance_to(global_position):
-			velocity = get_global_mouse_position()-global_position*50
+			velocity = (get_global_mouse_position()-global_position)/delta
 		else: 
-			velocity += (get_global_mouse_position()-global_position).normalized()*dash_distance*50
+			velocity = (get_global_mouse_position()-global_position).normalized()*dash_distance/delta
 		dash.emitting = true
 	
 	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
