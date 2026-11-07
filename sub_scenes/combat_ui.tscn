@@ -15,6 +15,14 @@
 [ext_resource type="Texture2D" uid="uid://dg8ou5fidrlxv" path="res://sprites/combat_ui/halfheart.png" id="11_d3adr"]
 [ext_resource type="Texture2D" uid="uid://djtvqmtc30p82" path="res://sprites/combat_ui/mistystep.png" id="11_exmyt"]
 [ext_resource type="Texture2D" uid="uid://7evd52gw1qtq" path="res://sprites/combat_ui/emptyheart.png" id="12_7ry47"]
+[ext_resource type="Texture2D" uid="uid://5sn02t0n5hw8" path="res://sprites/spellslot.png" id="16_10jfx"]
+[ext_resource type="Texture2D" uid="uid://n8f3odgtvpet" path="res://sprites/spells/fireball.png" id="17_5rh86"]
+[ext_resource type="Texture2D" uid="uid://b8h12lkahreng" path="res://sprites/spells/burninghands.png" id="18_qf57e"]
+[ext_resource type="Texture2D" uid="uid://c00aa3cv8u6gd" path="res://sprites/spells/flameblade.png" id="19_mda0e"]
+[ext_resource type="Texture2D" uid="uid://do83yrgqks7by" path="res://sprites/spells/gust.png" id="20_4vill"]
+[ext_resource type="Texture2D" uid="uid://dk4f525g3owk0" path="res://sprites/spells/iceknife.png" id="21_mda0e"]
+[ext_resource type="Texture2D" uid="uid://ccbmb735ly5it" path="res://sprites/spells/magicmissile.png" id="22_4vill"]
+[ext_resource type="Texture2D" uid="uid://dp6cdh52e5cmh" path="res://sprites/spells/thunderclap.png" id="23_gaxle"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m0i5l"]
 animations = [{
@@ -111,3 +119,48 @@ texture = ExtResource("12_7ry47")
 [node name="Mistystep" type="Sprite2D" parent="." unique_id=1258905247]
 position = Vector2(172, 127)
 texture = ExtResource("11_exmyt")
+
+[node name="Spellslot" type="Sprite2D" parent="." unique_id=1417489366]
+position = Vector2(19, 67)
+texture = ExtResource("16_10jfx")
+
+[node name="Fireball" type="Sprite2D" parent="Spellslot" unique_id=2118985759]
+visible = false
+position = Vector2(-2.3841858e-07, 1.7881393e-07)
+scale = Vector2(0.453125, 0.453125)
+texture = ExtResource("17_5rh86")
+
+[node name="Burninghands" type="Sprite2D" parent="Spellslot" unique_id=1674494125]
+visible = false
+position = Vector2(1, 0)
+scale = Vector2(0.390625, 0.390625)
+texture = ExtResource("18_qf57e")
+
+[node name="Flameblade" type="Sprite2D" parent="Spellslot" unique_id=1224109641]
+visible = false
+position = Vector2(6.9999995, 9.536743e-07)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("19_mda0e")
+
+[node name="Gust" type="Sprite2D" parent="Spellslot" unique_id=1506954913]
+visible = false
+position = Vector2(2.999999, 1.7881393e-07)
+scale = Vector2(0.5390624, 0.5390624)
+texture = ExtResource("20_4vill")
+
+[node name="Iceknife" type="Sprite2D" parent="Spellslot" unique_id=1181263129]
+visible = false
+position = Vector2(-0.99999976, -1.1920929e-07)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("21_mda0e")
+
+[node name="Magicmissile" type="Sprite2D" parent="Spellslot" unique_id=367721079]
+visible = false
+position = Vector2(9.094947e-13, 0.99999833)
+scale = Vector2(1.5156249, 1.5156249)
+texture = ExtResource("22_4vill")
+
+[node name="Thunderclap" type="Sprite2D" parent="Spellslot" unique_id=1693470939]
+visible = false
+scale = Vector2(0.40625, 0.40625)
+texture = ExtResource("23_gaxle")

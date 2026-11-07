@@ -7,7 +7,7 @@ var last_rotation = 0
 @export var speed = 1.5
 @export var dash_cooldown = 2.0
 @export var dash_timer = 0
-@export var dash_distance = 60
+@export var dash_distance = 80
 
 # cantrip
 @export var cantrip_cooldown = 0.2
@@ -15,18 +15,19 @@ var last_rotation = 0
 @export var cantrip_speed = 3
 @export var cantrip_damage = 1
 
+# spell scenes
+# var iceknife_scene = preload("res://sub_scenes/spells/IceKnife.tscn")
+var burninghands_scene = preload("res://sub_scenes/spells/BurningHands.tscn")
+
 # spell
 @export var spell_cooldown = 4.0
 @export var spell_timer = 0.0
-@export var spell_dice = []
+@export var selected_spell_scene = burninghands_scene
+@export var selected_spell = "BurningHands"
 
 # stats
 @export var max_hp = 6
 @export var hp = 6
-
-# spell scenes
-# var iceknife_scene = preload("res://sub_scenes/spells/IceKnife.tscn")
-var burninghands_scene = preload("res://sub_scenes/spells/BurningHands.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -60,13 +61,18 @@ func _process(delta: float) -> void:
 	if dash_timer >= dash_cooldown and Input.is_key_pressed(KEY_SPACE):
 		dash_timer = 0
 		# move
-		player.position += Vector2.from_angle(last_rotation)*dash_distance
+		if dash_distance > get_global_mouse_position().distance_to(player.global_position):
+			player.global_position = get_global_mouse_position()
+		else: 
+			player.position += (get_global_mouse_position()-player.global_position).normalized()*dash_distance
 		$Player/MistyStepP.emitting = true
 	
 	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
 	BaseScript.combat_ui.position = player.position
 	# display hp
 	BaseScript.combat_ui.update_hp(hp)
+	# display spell
+	BaseScript.combat_ui.update_spell(selected_spell)
 
 var firebolt_scene = preload("res://sub_scenes/spells/Firebolt.tscn")
 
@@ -78,9 +84,9 @@ func cast_cantrip():
 	get_parent().add_child(new_firebolt)
 
 func cast_spell():
-	var burninghands = burninghands_scene.instantiate()
-	burninghands.player = get_child(0)
-	get_parent().add_child(burninghands)
+	var spell = selected_spell_scene.instantiate()
+	spell.player = get_child(0)
+	get_parent().add_child(spell)
 
 func _input(event):
 	# Mouse in viewport coordinates.
