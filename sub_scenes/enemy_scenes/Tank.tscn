@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://54oopx70gom2"]
 
 [ext_resource type="Texture2D" uid="uid://beineqms04lv0" path="res://sprites/orc.png" id="1_5etig"]
+[ext_resource type="Script" uid="uid://jaywdur2qjgv" path="res://scripts/tank.gd" id="1_ov5k2"]
 
 [node name="Tank" type="Node2D" unique_id=371974212]
+script = ExtResource("1_ov5k2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=815225426]
 texture = ExtResource("1_5etig")
