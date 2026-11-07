@@ -106,3 +106,8 @@ func _input(event):
 			cast_cantrip()
 			cantrip_timer = 0.0
 	
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.get_node("Player"):
+		hp -= 1

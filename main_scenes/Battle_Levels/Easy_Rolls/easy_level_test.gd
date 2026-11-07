@@ -14,4 +14,8 @@ func _ready():
 func _process(delta: float):
 	
 	for enemy in enemies:
+		if enemy.health <= 0:
+			enemy.queue_free()
+			enemies.erase(enemy)
+			
 		enemy.move(delta, player.global_position)

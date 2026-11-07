@@ -15,3 +15,13 @@ func _ready():
 func move(delta: float, playerpos: Vector2):
 	var direction = global_position.direction_to(playerpos)
 	global_position += direction * speed * delta
+	
+	
+
+
+
+func on_hitbox_collide(area: Area2D) -> void:
+	if area.get_node("Firebolt"):
+		health -= 10
+	
+		

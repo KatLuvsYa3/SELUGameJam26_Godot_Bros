@@ -9,3 +9,8 @@ var type = Enemy.Type.TANK
 func move(delta: float, playerpos: Vector2):
 	var direction = global_position.direction_to(playerpos)
 	global_position += direction * speed * delta
+
+
+func _ready():
+	var healthBar = preload("res://sub_scenes/enemy_scenes/enemy_health.tscn")
+	

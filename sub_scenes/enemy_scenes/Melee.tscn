@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://7ff4ho1suw6f"]
+[gd_scene format=3 uid="uid://bkwk7tkga304q"]
 
 [ext_resource type="Texture2D" uid="uid://ces4wk10dea8h" path="res://sprites/goblin.png" id="1_mq8sj"]
 [ext_resource type="Script" uid="uid://b8p5cmqvv2jlt" path="res://scripts/melee.gd" id="1_tdslv"]
@@ -16,3 +16,5 @@ texture = ExtResource("1_mq8sj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1138473450]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_qt2xu")
+
+[connection signal="area_entered" from="Area2D" to="." method="on_hitbox_collide"]
