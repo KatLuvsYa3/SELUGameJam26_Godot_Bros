@@ -85,7 +85,7 @@ var thunderclap_scene = preload("res://sub_scenes/spells/ThunderClap.tscn")
 
 func thunderclap():
 	var new_thunderclap = thunderclap_scene.instantiate()
-	new_thunderclap.position = sprite.global_position
+	new_thunderclap.position = sprite.global_position + Vector2.from_angle(sprite.rotation)*20
 	get_parent().get_parent().add_child(new_thunderclap)
 
 func lookAt(playerpos: Vector2):
