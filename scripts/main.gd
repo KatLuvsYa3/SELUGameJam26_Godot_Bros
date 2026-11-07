@@ -9,8 +9,8 @@ func _ready() -> void:
 func _on_play_pressed() -> void:
 	print("Play")
 func _on_options_pressed() -> void:
-	print("Options")
+	get_tree().change_scene_to_file("res://test_scenes/options.tscn")
 func _on_credits_pressed() -> void:
-	print("Credits")
+	get_tree().change_scene_to_file("res://test_scenes/credits.tscn")
 func _on_quitgame_pressed() -> void:
 	get_tree().quit()

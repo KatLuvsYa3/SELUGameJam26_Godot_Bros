@@ -2,17 +2,38 @@
 
 [ext_resource type="Script" uid="uid://dqhlxrnnc7u78" path="res://test_scenes/options.gd" id="1_yeiiq"]
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="2_3mo85"]
+[ext_resource type="FontFile" uid="uid://bgrqlvqn6ypgj" path="res://test_scenes/GothicByte.ttf" id="2_hgrw2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6sqss"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1sqe8"]
 
 [node name="Node2D" type="Node2D" unique_id=964654375]
 script = ExtResource("1_yeiiq")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=312759462]
+modulate = Color(0.210037, 0.42277315, 0.23270017, 1)
+self_modulate = Color(0.32501206, 0, 0.034372117, 1)
+show_behind_parent = true
+material = SubResource("ShaderMaterial_6sqss")
+offset_right = 256.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_1sqe8")
+
 [node name="Optionsbackbutton" type="Button" parent="." unique_id=406617686]
-offset_left = 5.0
-offset_top = 112.0
-offset_right = 76.0
-offset_bottom = 138.0
+offset_left = -7.0
+offset_top = 118.0
+offset_right = 64.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+theme_override_fonts/font = ExtResource("2_hgrw2")
+text = "Back"
+flat = true
 
 [node name="Viewport Background" type="Sprite2D" parent="." unique_id=1782503712]
+visible = false
 z_index = -1
 position = Vector2(128, 72)
 texture = ExtResource("2_3mo85")
