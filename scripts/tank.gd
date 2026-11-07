@@ -12,5 +12,7 @@ func move(delta: float, playerpos: Vector2):
 
 
 func _ready():
-	var healthBar = preload("res://sub_scenes/enemy_scenes/enemy_health.tscn")
+	var healthBar = preload("res://sub_scenes/enemy_health_bar.tscn").instantiate()
+	healthBar.start(self)
+	add_child(healthBar)
 	
