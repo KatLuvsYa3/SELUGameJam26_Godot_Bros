@@ -9,7 +9,7 @@ var audio_controller_scene = preload("res://sub_scenes/audio_scene.tscn").instan
 var combat_ui_scene = preload("res://sub_scenes/combat_ui.tscn").instantiate()
 @export var combat_ui = null
 
-var player_scene = preload("res://sub_scenes/NewPlayer.tscn").instantiate()
+var player_scene = preload("res://sub_scenes/NewPlayer.tscn")
 @export var player = null
 
 
@@ -19,18 +19,18 @@ var isincombat_scene = false
 func _ready() -> void:
 	add_child(audio_controller_scene)
 	audio_controller = get_child(0)
-	player = player_scene
+	player = player_scene.instantiate()
 	audio_controller.play_sound_from_tag("bootup")
 
 func win_game():
 	get_tree().root.get_child(1).queue_free()
-	get_child(1).queue_free()
+	combat_ui.visible = false
 	isincombat_scene = false
 	get_tree().change_scene_to_file("res://sub_scenes/win.tscn")
 
 func end_game():
 	get_tree().root.get_child(1).queue_free()
-	get_child(1).queue_free()
+	combat_ui.visible = false
 	isincombat_scene = false
 	get_tree().change_scene_to_file("res://sub_scenes/death.tscn")
 
@@ -41,21 +41,35 @@ func start_scene(scene):
 func combat_ui_enable():
 	add_child(combat_ui_scene)
 	combat_ui = get_child(get_child_count()-1)
+	combat_ui.visible = true
 	isincombat_scene = true
 
 func start_combat_scene(scene):
-	BaseScript.audio_controller.play_sound_from_tag("fight_theme")
-	get_tree().root.get_child(1).queue_free()
-	get_tree().change_scene_to_file(scene)
 	if !isincombat_scene: 
-		add_child(combat_ui_scene)
-		combat_ui = get_child(get_child_count()-1)
+		combat_ui_enable()
+	combat_ui.visible = true
+	player = player_scene.instantiate()
+	audio_controller.play_sound_from_tag("fight_theme")
+	get_tree().change_scene_to_file(scene)
 	isincombat_scene = true
+
+var combat_count = 0
+var total_combats = 2
+
+func next_combat():
+	if combat_count == 2:
+		BaseScript.start_combat_scene("res://main_scenes/Battle_Levels/bossfight.tscn")
+	else:
+		if combat_count >= total_combats:
+			win_game()
+		else:
+			combat_count+=1
+			var x = str(randi_range(1, 4))
+			BaseScript.start_combat_scene("res://main_scenes/Battle_Levels/Hard_Rolls/roll_"+x+".tscn")
 
 func exit_combat_scene():
 	if isincombat_scene: 
-		get_child(1).queue_free() #SHOULD BE COMBAT UI
-		combat_ui_scene = get_children(get_child_count()-1)
+		combat_ui.visible = false
 	isincombat_scene = false
 
 func place_player(parent, x, y):

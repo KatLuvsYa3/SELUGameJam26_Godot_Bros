@@ -28,24 +28,48 @@ tile_set = ExtResource("2_66heb")
 
 [node name="Melee" type="Node2D" parent="SpawnPoints" unique_id=879355483]
 
+[node name="Marker2D" type="Marker2D" parent="SpawnPoints/Melee" unique_id=1509994397]
+position = Vector2(308, 60)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnPoints/Melee" unique_id=322371011]
+position = Vector2(311, 172)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnPoints/Melee" unique_id=1162325694]
+position = Vector2(82, 172)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnPoints/Melee" unique_id=1378142665]
+position = Vector2(81, 55)
+
 [node name="Ranged" type="Node2D" parent="SpawnPoints" unique_id=954340261]
 
 [node name="Marker2D" type="Marker2D" parent="SpawnPoints/Ranged" unique_id=720939782]
-position = Vector2(191, 112)
+position = Vector2(191, 111)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnPoints/Ranged" unique_id=1868822501]
+position = Vector2(7, 111)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnPoints/Ranged" unique_id=1208088766]
+position = Vector2(192, 8)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnPoints/Ranged" unique_id=2082642994]
+position = Vector2(373, 111)
+
+[node name="Marker2D5" type="Marker2D" parent="SpawnPoints/Ranged" unique_id=1636704689]
+position = Vector2(193, 213)
 
 [node name="Tank" type="Node2D" parent="SpawnPoints" unique_id=1926982006]
 
 [node name="Marker2D" type="Marker2D" parent="SpawnPoints/Tank" unique_id=473030804]
-position = Vector2(70, 176)
+position = Vector2(38, 191)
 
 [node name="Marker2D2" type="Marker2D" parent="SpawnPoints/Tank" unique_id=1128451298]
-position = Vector2(326, 180)
+position = Vector2(355, 192)
 
 [node name="Marker2D3" type="Marker2D" parent="SpawnPoints/Tank" unique_id=289568424]
-position = Vector2(326, 44)
+position = Vector2(349, 31)
 
 [node name="Marker2D4" type="Marker2D" parent="SpawnPoints/Tank" unique_id=1409046502]
-position = Vector2(62, 38)
+position = Vector2(40, 27)
 
 [node name="Holes" type="Node2D" parent="." unique_id=1193491029]
 

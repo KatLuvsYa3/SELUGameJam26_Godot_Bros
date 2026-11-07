@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d1lw4g4oroig5"]
+
+[ext_resource type="Script" uid="uid://74r6gjfxtavy" path="res://sub_scenes/spells/ice_knife.gd" id="1_gr1u8"]
+[ext_resource type="Texture2D" uid="uid://dk4f525g3owk0" path="res://sprites/spells/iceknife.png" id="2_gr1u8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0i5l"]
+radius = 7.0
+
+[node name="IceKnife" type="Node2D" unique_id=108389273]
+script = ExtResource("1_gr1u8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=983535860]
+position = Vector2(-3, 0)
+rotation = -3.1415925
+metadata/Damage = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1077809747]
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_m0i5l")
+
+[node name="IceKnife" type="Sprite2D" parent="Area2D" unique_id=1405311381]
+texture = ExtResource("2_gr1u8")
+metadata/Damage = 0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ceyx3bn4yrrle"]
+
+[ext_resource type="Script" uid="uid://d3o4fb7edb2b1" path="res://sub_scenes/spells/fireball.gd" id="1_hfbix"]
+[ext_resource type="Texture2D" uid="uid://n8f3odgtvpet" path="res://sprites/spells/fireball.png" id="2_hfbix"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0i5l"]
+radius = 25.079872
+
+[node name="Fireball" type="Node2D" unique_id=108389273]
+script = ExtResource("1_hfbix")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=983535860]
+position = Vector2(-3, 0)
+rotation = -3.1415925
+metadata/Damage = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1077809747]
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_m0i5l")
+
+[node name="IceKnife" type="Sprite2D" parent="Area2D" unique_id=1405311381]
+position = Vector2(-3, 4.5298742e-07)
+texture = ExtResource("2_hfbix")
+metadata/Damage = 0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

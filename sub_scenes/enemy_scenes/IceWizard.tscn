@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bl3xkw0f3evh"]
+
+[ext_resource type="Script" uid="uid://cjxkmk0np83lw" path="res://sub_scenes/enemy_scenes/ice_wizard.gd" id="1_4n2y3"]
+[ext_resource type="Texture2D" uid="uid://6w65poqimf7d" path="res://sprites/icemage.png" id="2_4n2y3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qt2xu"]
+radius = 8.260869
+
+[node name="IceWizard" type="Node2D" unique_id=371974212]
+script = ExtResource("1_4n2y3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=16542314]
+
+[node name="Enemy" type="Sprite2D" parent="Area2D" unique_id=815225426]
+scale = Vector2(-1, 1)
+texture = ExtResource("2_4n2y3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=480509906]
+position = Vector2(2, 1)
+scale = Vector2(2.3, 2.3)
+shape = SubResource("CircleShape2D_qt2xu")
+
+[connection signal="area_entered" from="Area2D" to="." method="on_hitbox_collide"]

@@ -16,7 +16,7 @@ const enemyScenes = {
 const enemyHealth = {
 	Type.MELEE: 100,
 	Type.RANGED: 75,
-	Type.TANK: 300
+	Type.TANK: 200
 }
 
 const enemyDamage = {

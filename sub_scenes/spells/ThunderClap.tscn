@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dtag3k6r3vnw0"]
+
+[ext_resource type="Script" uid="uid://c4j8pmui4kc15" path="res://sub_scenes/spells/thunder_clap.gd" id="1_w7xct"]
+[ext_resource type="Texture2D" uid="uid://dp6cdh52e5cmh" path="res://sprites/spells/thunderclap.png" id="2_w7xct"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0i5l"]
+radius = 26.019224
+
+[node name="ThunderClap" type="Node2D" unique_id=108389273]
+script = ExtResource("1_w7xct")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=983535860]
+position = Vector2(-3, 0)
+rotation = -3.1415925
+metadata/Damage = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1077809747]
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_m0i5l")
+
+[node name="IceKnife" type="Sprite2D" parent="Area2D" unique_id=1405311381]
+position = Vector2(-3, 4.5298742e-07)
+texture = ExtResource("2_w7xct")
+metadata/Damage = 0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

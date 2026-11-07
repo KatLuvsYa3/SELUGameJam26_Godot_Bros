@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://23yhdbetwiij"]
 
+[ext_resource type="Texture2D" uid="uid://briygueotemmj" path="res://sprites/winscreen.png" id="1_cs623"]
+
 [node name="Win" type="Node2D" unique_id=385806089]
+
+[node name="Winscreen" type="Sprite2D" parent="." unique_id=214009651]
+position = Vector2(128, 72)
+texture = ExtResource("1_cs623")

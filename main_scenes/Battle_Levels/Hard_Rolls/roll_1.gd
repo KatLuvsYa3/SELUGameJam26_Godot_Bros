@@ -28,7 +28,7 @@ func _ready():
 
 func _process(delta: float):
 	if enemies.size() == 0:
-		BaseScript.win_game()
+		BaseScript.next_combat()
 	
 	for enemy in enemies:
 		if enemy.health <= 0:

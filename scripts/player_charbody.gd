@@ -126,7 +126,7 @@ func _input(event):
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if dash_timer > 0.05:
-		if area.has_node("Arrow"):
+		if area.has_node("Arrow") or area.has_node("IceKnife"):
 			BaseScript.audio_controller.play_sound_from_tag("damage_taken")
 			hp -= 1
 		if area.has_node("Enemy"):
