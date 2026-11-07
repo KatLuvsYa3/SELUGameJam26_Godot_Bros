@@ -23,49 +23,107 @@ offset_bottom = 144.0
 mouse_filter = 2
 texture = SubResource("CanvasTexture_b136p")
 
+[node name="Label" type="Label" parent="." unique_id=1695036275]
+modulate = Color(1, 1, 1, 0.050980393)
+self_modulate = Color(0.72156864, 0, 0.92941177, 1)
+offset_right = 161.0
+offset_bottom = 36.0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_fd305")
+theme_override_font_sizes/font_size = 29
+text = "Spellcaster's"
+
+[node name="Label3" type="Label" parent="." unique_id=56415026]
+modulate = Color(1, 1, 1, 0.13725491)
+self_modulate = Color(0.72156864, 0, 0.92941177, 1)
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 174.0
+offset_bottom = 48.0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_fd305")
+theme_override_font_sizes/font_size = 29
+text = "Spellcaster's"
+
+[node name="Label4" type="Label" parent="." unique_id=1282784965]
+modulate = Color(1, 1, 1, 0.49019608)
+self_modulate = Color(0.72156864, 0, 0.92941177, 1)
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 177.0
+offset_bottom = 53.0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_fd305")
+theme_override_font_sizes/font_size = 29
+text = "Spellcaster's"
+
+[node name="Label2" type="Label" parent="." unique_id=1502482841]
+modulate = Color(1, 1, 1, 0.11372549)
+self_modulate = Color(0.72156864, 0, 0.92941177, 1)
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 169.0
+offset_bottom = 42.0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_fd305")
+theme_override_font_sizes/font_size = 29
+text = "Spellcaster's"
+
 [node name="PlayButton" type="Button" parent="." unique_id=65919269]
+modulate = Color(1, 1, 1, 0.16078432)
 offset_left = 147.0
 offset_top = 11.0
 offset_right = 247.0
 offset_bottom = 36.0
 theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 theme_override_colors/font_hover_color = Color(0.15127605, 0.15127608, 0.15127596, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_fd305")
 theme_override_font_sizes/font_size = 16
 text = "Play"
 flat = true
 
 [node name="OptionsButton" type="Button" parent="." unique_id=2067856669]
+modulate = Color(1, 1, 1, 0.16078432)
 offset_left = 147.0
 offset_top = 43.0
 offset_right = 247.0
 offset_bottom = 68.0
 theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 theme_override_colors/font_hover_color = Color(0.15127605, 0.15127608, 0.15127596, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_fd305")
 theme_override_font_sizes/font_size = 16
 text = "Options"
 flat = true
 
 [node name="CreditsButton" type="Button" parent="." unique_id=711741435]
+modulate = Color(1, 1, 1, 0.16078432)
 offset_left = 147.0
 offset_top = 75.0
 offset_right = 247.0
 offset_bottom = 100.0
 theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 theme_override_colors/font_hover_color = Color(0.15127605, 0.15127608, 0.15127596, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_fd305")
 theme_override_font_sizes/font_size = 16
 text = "Credits"
 flat = true
 
 [node name="QuitgameButton" type="Button" parent="." unique_id=1536798952]
+modulate = Color(1, 1, 1, 0.16078432)
 offset_left = 147.0
 offset_top = 107.0
 offset_right = 247.0
 offset_bottom = 132.0
 theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 theme_override_colors/font_hover_color = Color(0.15127605, 0.15127608, 0.15127596, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_fd305")
 theme_override_font_sizes/font_size = 16
 text = "Quit"
@@ -82,3 +140,47 @@ metadata/_edit_lock_ = true
 z_index = -1
 position = Vector2(128, 72)
 texture = ExtResource("4_fd305")
+
+[node name="Label8" type="Label" parent="." unique_id=852701154]
+self_modulate = Color(0.72156864, 0, 0.92941177, 0.09803922)
+offset_left = 11.0
+offset_top = 85.0
+offset_right = 146.0
+offset_bottom = 116.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_fd305")
+theme_override_font_sizes/font_size = 30
+text = "Vengeance"
+
+[node name="Label7" type="Label" parent="." unique_id=640258969]
+self_modulate = Color(0.72156864, 0, 0.92941177, 0.2)
+offset_left = 15.0
+offset_top = 90.0
+offset_right = 150.0
+offset_bottom = 121.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_fd305")
+theme_override_font_sizes/font_size = 30
+text = "Vengeance"
+
+[node name="Label6" type="Label" parent="." unique_id=980945380]
+self_modulate = Color(0.72156864, 0, 0.92941177, 0.3882353)
+offset_left = 19.0
+offset_top = 95.0
+offset_right = 154.0
+offset_bottom = 126.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_fd305")
+theme_override_font_sizes/font_size = 30
+text = "Vengeance"
+
+[node name="Label5" type="Label" parent="." unique_id=1412818824]
+self_modulate = Color(0.72156864, 0, 0.92941177, 0.5921569)
+offset_left = 22.0
+offset_top = 101.0
+offset_right = 157.0
+offset_bottom = 132.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_fd305")
+theme_override_font_sizes/font_size = 30
+text = "Vengeance"
