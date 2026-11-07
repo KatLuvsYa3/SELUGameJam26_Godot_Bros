@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dkmfqjs0icqme"]
+
+[ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_lg5f7"]
+[ext_resource type="FontFile" uid="uid://bgrqlvqn6ypgj" path="res://test_scenes/GothicByte.ttf" id="1_ss4wl"]
+
+[node name="Node2D" type="Node2D" unique_id=956090293]
+
+[node name="PlayButton" type="Button" parent="." unique_id=65919269]
+offset_left = 80.0
+offset_top = 8.0
+offset_right = 180.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.63375664, 0.6337567, 0.6337577, 1)
+theme_override_fonts/font = ExtResource("1_ss4wl")
+theme_override_font_sizes/font_size = 12
+text = "Play"
+flat = true
+
+[node name="OptionsButton" type="Button" parent="." unique_id=2067856669]
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 180.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.63375664, 0.6337567, 0.6337577, 1)
+theme_override_fonts/font = ExtResource("1_ss4wl")
+theme_override_font_sizes/font_size = 12
+text = "Options"
+flat = true
+
+[node name="CreditsButton" type="Button" parent="." unique_id=711741435]
+offset_left = 80.0
+offset_top = 72.0
+offset_right = 180.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.63375664, 0.6337567, 0.6337577, 1)
+theme_override_fonts/font = ExtResource("1_ss4wl")
+theme_override_font_sizes/font_size = 12
+text = "Credits"
+flat = true
+
+[node name="QuitgameButton" type="Button" parent="." unique_id=1536798952]
+offset_left = 80.0
+offset_top = 104.0
+offset_right = 180.0
+offset_bottom = 129.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.63375664, 0.6337567, 0.6337577, 1)
+theme_override_fonts/font = ExtResource("1_ss4wl")
+theme_override_font_sizes/font_size = 12
+text = "Quit"
+flat = true
+
+[node name="Viewport Background" type="Sprite2D" parent="." unique_id=831663833]
+z_index = -1
+position = Vector2(128, 72)
+texture = ExtResource("1_lg5f7")
+metadata/_edit_lock_ = true
