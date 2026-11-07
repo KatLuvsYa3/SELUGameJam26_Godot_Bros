@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfg32a8xeo3j0"]
 
-[ext_resource type="Script" uid="uid://br7ghu01yvsl2" path="res://main_scenes/Main_Menu/credits (2).gd" id="1_3psl1"]
+[ext_resource type="Script" uid="uid://br7ghu01yvsl2" path="res://main_scenes/Main_Menu/credits.gd" id="1_3psl1"]
 [ext_resource type="FontFile" uid="uid://3uws0nwfefr" path="res://main_scenes/Main_Menu/PinyonScript-Regular.ttf" id="2_a8ajb"]
 [ext_resource type="FontFile" uid="uid://bgrqlvqn6ypgj" path="res://main_scenes/Main_Menu/GothicByte.ttf" id="3_oc8ne"]
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="4_3ft7d"]
@@ -9,7 +9,7 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_p4o8g"]
 
-[node name="Node2D3" type="Node2D" unique_id=1932615397]
+[node name="Node2D" type="Node2D" unique_id=1932615397]
 script = ExtResource("1_3psl1")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1219889826]

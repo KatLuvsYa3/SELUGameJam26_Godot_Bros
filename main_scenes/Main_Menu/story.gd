@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var pages := [
 	"One stormy night, whilst the great spellcaster was sleeping after countless restless nights, malevolent goblins raided his tower. Once he arose during the night the goblins were already far gone. The storm thickened throughout the night, lightning was striking without any signs of stopping. He had quickly noticed his most prized possession, along with countless other artifacts stolen. The spellcaster’s wand, forged with perfection & infused with a tremendous amount of mana, the wand that ruled the land and locked the goblin king away, was stolen.",
