@@ -9,18 +9,24 @@ var last_rotation = 0
 @export var dash_timer = 0
 @export var dash_distance = 60
 
-# spell
+# cantrip
 @export var cantrip_cooldown = 0.2
 @export var cantrip_timer = 0.0
 @export var cantrip_speed = 3
 @export var cantrip_damage = 1
+
+# spell
 @export var spell_cooldown = 4.0
 @export var spell_timer = 0.0
+@export var spell_dice = []
 
 # stats
 @export var max_hp = 6
 @export var hp = 6
 
+# spell scenes
+# var iceknife_scene = preload("res://sub_scenes/spells/IceKnife.tscn")
+var burninghands_scene = preload("res://sub_scenes/spells/BurningHands.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -72,15 +78,17 @@ func cast_cantrip():
 	get_parent().add_child(new_firebolt)
 
 func cast_spell():
-	pass
+	var burninghands = burninghands_scene.instantiate()
+	burninghands.player = get_child(0)
+	get_parent().add_child(burninghands)
 
 func _input(event):
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
 		if spell_timer > spell_cooldown and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			cast_spell()
-			spell_timer = 0
+			spell_timer = 0.0
 		elif cantrip_timer > cantrip_cooldown and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			cast_cantrip()
-			cantrip_timer = 0
+			cantrip_timer = 0.0
 	
