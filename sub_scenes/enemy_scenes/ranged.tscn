@@ -3,8 +3,15 @@
 [ext_resource type="Script" uid="uid://cq3153sd1tyul" path="res://scripts/ranged.gd" id="1_at5jy"]
 [ext_resource type="Texture2D" uid="uid://df0cjt2xlyf1t" path="res://sprites/range_goblin.png" id="1_b5qf1"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qt2xu"]
+
 [node name="Ranger" type="Node2D" unique_id=1722592856]
 script = ExtResource("1_at5jy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=642414836]
+[node name="Area2D" type="Area2D" parent="." unique_id=1416520430]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=642414836]
 texture = ExtResource("1_b5qf1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1351411544]
+shape = SubResource("CircleShape2D_qt2xu")
