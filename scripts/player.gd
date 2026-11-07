@@ -6,30 +6,30 @@ var last_rotation = 0
 @onready var collision = $Area2D/CollisionShape2D
 
 # movement 
-@export var speed = 1.5
-@export var dash_cooldown = 2.0
-@export var dash_timer = 0
-@export var dash_distance = 80
+var speed = 1.5
+var dash_cooldown = 2.0
+var dash_timer = 0
+var dash_distance = 80
 
 # cantrip
-@export var cantrip_cooldown = 0.2
-@export var cantrip_timer = 0.0
-@export var cantrip_speed = 3
-@export var cantrip_damage = 1
+var cantrip_cooldown = 0.2
+var cantrip_timer = 0.0
+var cantrip_speed = 3
+var cantrip_damage = 1
 
 # spell scenes
 # var iceknife_scene = preload("res://sub_scenes/spells/IceKnife.tscn")
 var burninghands_scene = preload("res://sub_scenes/spells/BurningHands.tscn")
 
 # spell
-@export var spell_cooldown = 4.0
-@export var spell_timer = 0.0
-@export var selected_spell_scene = burninghands_scene
-@export var selected_spell = "BurningHands"
+var spell_cooldown = 4.0
+var spell_timer = 0.0
+var selected_spell_scene = burninghands_scene
+var selected_spell = "BurningHands"
 
 # stats
-@export var max_hp = 6
-@export var hp = 6
+var max_hp = 6
+var hp = 6
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -79,7 +79,7 @@ func _process(delta: float) -> void:
 	BaseScript.combat_ui.update_spell(selected_spell)
 	BaseScript.combat_ui.update_spell_cooldown(min(spell_timer/spell_cooldown, 1.0))
 	
-	check_tile_effects()
+	#check_tile_effects()
 
 #func check_tile_effects():
 	## Convert player position to tile map coordinates

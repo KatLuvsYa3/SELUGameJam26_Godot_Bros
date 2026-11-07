@@ -15,19 +15,6 @@ offsets = PackedFloat32Array(0, 0.0024630541)
 
 [node name="Player" type="Node2D" unique_id=962936146]
 script = ExtResource("1_vo3rv")
-speed = null
-dash_cooldown = null
-dash_timer = null
-dash_distance = null
-cantrip_cooldown = null
-cantrip_timer = null
-cantrip_speed = null
-cantrip_damage = null
-spell_cooldown = null
-spell_timer = null
-selected_spell = null
-max_hp = null
-hp = null
 
 [node name="Area2D" type="Area2D" parent="." unique_id=243024605]
 
