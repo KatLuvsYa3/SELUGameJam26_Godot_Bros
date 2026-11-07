@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://cari165hdb6xg"]
 
+[ext_resource type="Script" uid="uid://qbiiromoi103" path="res://scripts/firebolt.gd" id="1_swp0k"]
+[ext_resource type="Texture2D" uid="uid://bsy6wswiplkmw" path="res://sprites/spells/firebolt.png" id="1_wsno5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0i5l"]
+radius = 7.0
+
 [node name="Firebolt" type="Node2D" unique_id=108389273]
+script = ExtResource("1_swp0k")
+
+[node name="Firebolt" type="Sprite2D" parent="." unique_id=1405311381]
+position = Vector2(-3, 0)
+rotation = 3.1415927
+texture = ExtResource("1_wsno5")
+
+[node name="Area2D" type="Area2D" parent="Firebolt" unique_id=983535860]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Firebolt/Area2D" unique_id=1077809747]
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_m0i5l")
