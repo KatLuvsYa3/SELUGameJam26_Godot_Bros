@@ -15,5 +15,4 @@ func _ready():
 func _process(delta: float):
 	
 	for enemy in enemies:
-		direction = enemy.global_position.direction_to(player.global_position)
-		enemy.global_position +=  direction * enemy.speed * delta
+		enemy.Enemy.move(delta, player)
