@@ -49,3 +49,6 @@ position = Vector2(85, 57)
 position = Vector2(66, 30)
 
 [node name="Tank" type="Node2D" parent="SpawnPoints" unique_id=996038208]
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPoints/Tank" unique_id=1431769374]
+position = Vector2(26, 77)
