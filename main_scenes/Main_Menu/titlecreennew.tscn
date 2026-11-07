@@ -75,10 +75,10 @@ text = "Spellcaster's"
 
 [node name="PlayButton" type="Button" parent="." unique_id=65919269]
 modulate = Color(1, 1, 1, 0.16078432)
-offset_left = 147.0
-offset_top = 11.0
-offset_right = 247.0
-offset_bottom = 36.0
+offset_left = 145.0
+offset_top = 32.0
+offset_right = 245.0
+offset_bottom = 57.0
 theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 theme_override_colors/font_hover_color = Color(0.15127605, 0.15127608, 0.15127596, 1)
 theme_override_constants/outline_size = 4
@@ -87,26 +87,12 @@ theme_override_font_sizes/font_size = 16
 text = "Play"
 flat = true
 
-[node name="OptionsButton" type="Button" parent="." unique_id=2067856669]
-modulate = Color(1, 1, 1, 0.16078432)
-offset_left = 147.0
-offset_top = 43.0
-offset_right = 247.0
-offset_bottom = 68.0
-theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
-theme_override_colors/font_hover_color = Color(0.15127605, 0.15127608, 0.15127596, 1)
-theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_fd305")
-theme_override_font_sizes/font_size = 16
-text = "Options"
-flat = true
-
 [node name="CreditsButton" type="Button" parent="." unique_id=711741435]
 modulate = Color(1, 1, 1, 0.16078432)
 offset_left = 147.0
-offset_top = 75.0
+offset_top = 66.0
 offset_right = 247.0
-offset_bottom = 100.0
+offset_bottom = 91.0
 theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 theme_override_colors/font_hover_color = Color(0.15127605, 0.15127608, 0.15127596, 1)
 theme_override_constants/outline_size = 4
@@ -117,10 +103,10 @@ flat = true
 
 [node name="QuitgameButton" type="Button" parent="." unique_id=1536798952]
 modulate = Color(1, 1, 1, 0.16078432)
-offset_left = 147.0
-offset_top = 107.0
-offset_right = 247.0
-offset_bottom = 132.0
+offset_left = 145.0
+offset_top = 101.0
+offset_right = 245.0
+offset_bottom = 126.0
 theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 theme_override_colors/font_hover_color = Color(0.15127605, 0.15127608, 0.15127596, 1)
 theme_override_constants/outline_size = 4
@@ -140,6 +126,7 @@ metadata/_edit_lock_ = true
 z_index = -1
 position = Vector2(128, 72)
 texture = ExtResource("4_fd305")
+metadata/_edit_lock_ = true
 
 [node name="Label8" type="Label" parent="." unique_id=852701154]
 self_modulate = Color(0.72156864, 0, 0.92941177, 0.09803922)

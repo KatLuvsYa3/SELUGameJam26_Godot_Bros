@@ -2,7 +2,7 @@ extends Node
 
 func _ready() -> void:
 	$PlayButton.pressed.connect(_on_play_pressed)
-	$OptionsButton.pressed.connect(_on_options_pressed)
+	#$OptionsButton.pressed.connect(_on_options_pressed)
 	$CreditsButton.pressed.connect(_on_credits_pressed)
 	$QuitgameButton.pressed.connect(_on_quitgame_pressed)
 
