@@ -46,4 +46,7 @@ func _process(delta: float) -> void:
 			position += input_dir.normalized()*dash_distance
 		$MistyStepP.emitting = true
 	
-	#BaseScript.combat_ui
+	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
+	
+	# display hp
+	BaseScript.combat_ui.update_hp(hp)
