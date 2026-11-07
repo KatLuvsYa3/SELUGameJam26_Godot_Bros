@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bc2so68x5ib14"]
+
+[ext_resource type="Script" uid="uid://b2hauehgsr1tm" path="res://scripts/main.gd" id="1_5xmsl"]
+[ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_lg5f7"]
+[ext_resource type="FontFile" uid="uid://bgrqlvqn6ypgj" path="res://test_scenes/GothicByte.ttf" id="1_ss4wl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nwpmh"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b136p"]
+
+[node name="Node2D" type="Node2D" unique_id=956090293]
+script = ExtResource("1_5xmsl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1670212204]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+material = SubResource("ShaderMaterial_nwpmh")
+offset_right = 256.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_b136p")
+
+[node name="PlayButton" type="Button" parent="." unique_id=65919269]
+offset_left = 147.0
+offset_top = 11.0
+offset_right = 247.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.63375664, 0.6337567, 0.6337577, 1)
+theme_override_fonts/font = ExtResource("1_ss4wl")
+theme_override_font_sizes/font_size = 16
+text = "Play"
+flat = true
+
+[node name="OptionsButton" type="Button" parent="." unique_id=2067856669]
+offset_left = 147.0
+offset_top = 43.0
+offset_right = 247.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.63375664, 0.6337567, 0.6337577, 1)
+theme_override_fonts/font = ExtResource("1_ss4wl")
+theme_override_font_sizes/font_size = 16
+text = "Options"
+flat = true
+
+[node name="CreditsButton" type="Button" parent="." unique_id=711741435]
+offset_left = 147.0
+offset_top = 75.0
+offset_right = 247.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.63375664, 0.6337567, 0.6337577, 1)
+theme_override_fonts/font = ExtResource("1_ss4wl")
+theme_override_font_sizes/font_size = 16
+text = "Credits"
+flat = true
+
+[node name="QuitgameButton" type="Button" parent="." unique_id=1536798952]
+offset_left = 147.0
+offset_top = 107.0
+offset_right = 247.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.63375664, 0.6337567, 0.6337577, 1)
+theme_override_fonts/font = ExtResource("1_ss4wl")
+theme_override_font_sizes/font_size = 16
+text = "Quit"
+flat = true
+
+[node name="Viewport Background" type="Sprite2D" parent="." unique_id=831663833]
+visible = false
+z_index = -1
+position = Vector2(128, 72)
+texture = ExtResource("1_lg5f7")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
