@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://diysk327jqj2u" path="res://scripts/player.gd" id="1_vo3rv"]
 [ext_resource type="Texture2D" uid="uid://dcl0usxcy8fgi" path="res://sprites/player.png" id="2_72usq"]
+[ext_resource type="Texture2D" uid="uid://btupi2cmt4fqg" path="res://sprites/mistystepsparkle.png" id="3_72usq"]
+
+[sub_resource type="Gradient" id="Gradient_w17ly"]
+offsets = PackedFloat32Array(0.10098522, 0.7906404)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_72usq"]
+offsets = PackedFloat32Array(0, 0.0024630541)
 
 [node name="Player" type="Node2D" unique_id=962936146]
 script = ExtResource("1_vo3rv")
@@ -10,3 +18,22 @@ script = ExtResource("1_vo3rv")
 position = Vector2(-6, 0)
 scale = Vector2(-1, 1)
 texture = ExtResource("2_72usq")
+
+[node name="MistyStepP" type="CPUParticles2D" parent="." unique_id=1821018125]
+z_index = -1
+emitting = false
+texture = ExtResource("3_72usq")
+lifetime = 1.57
+one_shot = true
+explosiveness = 0.92
+randomness = 0.05
+emission_shape = 1
+emission_sphere_radius = 16.25
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 0.1
+initial_velocity_max = 0.1
+linear_accel_min = 0.5
+linear_accel_max = 0.5
+color_ramp = SubResource("Gradient_w17ly")
+color_initial_ramp = SubResource("Gradient_72usq")

@@ -1,8 +1,12 @@
 extends Node2D
 
-@export var speed = 2
-
 var last_rotation = 0
+
+#movement 
+@export var speed = 1.5
+@export var dash_cooldown = 2.0
+@export var dash_timer = 0
+@export var dash_distance = 60
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,6 +15,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# walk
 	var input_dir = Vector2.ZERO
 	if Input.is_key_pressed(KEY_W):
 		input_dir += Vector2.UP
@@ -25,3 +30,15 @@ func _process(delta: float) -> void:
 	else: 
 		last_rotation = input_dir.normalized().angle()
 		rotation = last_rotation
+	
+	# misty step
+	dash_timer += delta
+	if dash_timer >= dash_cooldown and Input.is_key_pressed(KEY_SPACE):
+		dash_timer = 0
+		# move
+		if input_dir == Vector2.ZERO:
+			position += Vector2.from_angle(last_rotation)*dash_distance
+		else: 
+			position += input_dir.normalized()*dash_distance
+		$MistyStepP.emitting = true
+	

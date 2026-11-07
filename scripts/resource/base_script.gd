@@ -1,10 +1,16 @@
 extends Node
 
+@export var viewport_height = 144
+@export var viewport_width = 256
+
 var audio_controller_scene = preload("res://sub_scenes/audio_scene.tscn").instantiate()
 @export var audio_controller = null
 
 var combat_ui_scene = preload("res://sub_scenes/combat_ui.tscn").instantiate()
 @export var combat_ui = null
+
+var player_scene = preload("res://sub_scenes/Player.tscn").instantiate()
+@export var player = null
 
 var isincombat_scene = false
 
@@ -12,6 +18,7 @@ var isincombat_scene = false
 func _ready() -> void:
 	add_child(audio_controller_scene)
 	audio_controller = get_child(0)
+	player = player_scene
 
 func start_combat_scene(scene):
 	get_tree().root.get_child(1).queue_free()
@@ -26,6 +33,13 @@ func exit_combat_scene():
 		get_child(1).queue_free() #SHOULD BE COMBAT UI
 		combat_ui_scene = get_children(get_child_count()-1)
 	isincombat_scene = false
+
+func place_player(parent, x, y):
+	var pos = Vector2.ZERO
+	pos.x = x
+	pos.y = y
+	player.position = pos
+	parent.add_child(player)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
