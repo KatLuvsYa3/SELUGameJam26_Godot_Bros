@@ -38,3 +38,18 @@ z_index = -1
 position = Vector2(128, 72)
 texture = ExtResource("2_3mo85")
 metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1571943939]
+offset_left = 94.0
+offset_top = 3.0
+offset_right = 173.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("2_hgrw2")
+theme_override_font_sizes/font_size = 20
+text = "Options!"
+
+[node name="HowToPlayCheck" type="CheckButton" parent="." unique_id=574556362]
+offset_left = 145.0
+offset_top = 43.0
+offset_right = 189.0
+offset_bottom = 67.0
