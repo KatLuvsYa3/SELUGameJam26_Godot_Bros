@@ -27,4 +27,5 @@ func on_hitbox_collide(area: Area2D) -> void:
 	if area.has_node("Firebolt"):
 		health -= 10
 	
-		
+	if area.has_node("Burninghands"):
+		health -= 5
