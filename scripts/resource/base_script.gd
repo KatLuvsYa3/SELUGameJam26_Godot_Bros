@@ -20,6 +20,7 @@ func _ready() -> void:
 	add_child(audio_controller_scene)
 	audio_controller = get_child(0)
 	player = player_scene
+	audio_controller.play_sound_from_tag("ambient")
 	
 func combat_ui_enable():
 	add_child(combat_ui_scene)
