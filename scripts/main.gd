@@ -7,6 +7,7 @@ func _ready() -> void:
 	$QuitgameButton.pressed.connect(_on_quitgame_pressed)
 
 func _on_play_pressed() -> void:
+	BaseScript.audio_controller.play_sound_from_tag("ambient")
 	GameSettings.start_game()
 
 func _on_options_pressed() -> void:

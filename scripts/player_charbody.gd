@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_D):
 		input_dir += Vector2.RIGHT
 	velocity = input_dir.normalized()*((1-delta)*speed*50)
-	look_at(get_global_mouse_position())
+	player.look_at(get_global_mouse_position())
 	
 	# misty step
 	dash_timer += delta
@@ -90,8 +90,8 @@ var firebolt_scene = preload("res://sub_scenes/spells/Firebolt.tscn")
 
 func cast_cantrip():
 	var new_firebolt = firebolt_scene.instantiate()
-	new_firebolt.rotation = rotation
-	new_firebolt.position = global_position
+	new_firebolt.rotation = player.rotation
+	new_firebolt.position = player.global_position
 	new_firebolt.speed = cantrip_speed
 	get_parent().get_parent().add_child(new_firebolt)
 
