@@ -91,8 +91,9 @@ func cast_cantrip():
 func cast_spell():
 	var power = await BaseScript.combat_ui.roll()
 	var spell = selected_spell_scene.instantiate()
+	spell.visible = false
 	spell.set_power(power)
-	spell.player = get_child(0)
+	spell.player = get_child(0).get_child(0)
 	get_parent().add_child(spell)
 	spell.start = true
 
