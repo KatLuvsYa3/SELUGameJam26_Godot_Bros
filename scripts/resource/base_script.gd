@@ -57,7 +57,7 @@ var combat_count = 0
 var total_combats = 2
 
 func next_combat():
-	if combat_count == 2:
+	if combat_count == 0:
 		BaseScript.start_combat_scene("res://main_scenes/Battle_Levels/bossfight.tscn")
 	else:
 		if combat_count >= total_combats:

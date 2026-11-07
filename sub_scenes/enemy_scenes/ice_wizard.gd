@@ -56,11 +56,21 @@ func move(delta: float, playerpos: Vector2):
 	spelltimer += delta
 	if spelltimer > 1.25:
 		spelltimer = 0
-		match randi_range(0, 3):
+		match randi_range(0, 4):
 			0: pass
 			1: iceknife()
 			2: thunderclap()
 			3: fireball()
+			4: magicmissile()
+
+var magicmissile_scene = preload("res://sub_scenes/spells/MagicMissile.tscn")
+
+func magicmissile():
+	var new_iceknife = magicmissile_scene.instantiate()
+	new_iceknife.rotation = sprite.rotation
+	new_iceknife.position = sprite.global_position
+	new_iceknife.speed = 1
+	get_parent().get_parent().add_child(new_iceknife)
 
 var icekinfe_scene = preload("res://sub_scenes/spells/IceKnife.tscn")
 
