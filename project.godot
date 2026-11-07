@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SELUGameJam26"
-run/main_scene="uid://h3novfq13xxa"
+run/main_scene="uid://fogcdyh066c4"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

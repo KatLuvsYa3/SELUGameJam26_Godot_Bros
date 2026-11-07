@@ -46,6 +46,6 @@ func _process(delta: float) -> void:
 		$Player/MistyStepP.emitting = true
 	
 	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
-	
+	BaseScript.combat_ui.position = player.position
 	# display hp
 	BaseScript.combat_ui.update_hp(hp)
