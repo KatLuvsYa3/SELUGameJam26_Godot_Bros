@@ -12,7 +12,7 @@ func _init() -> void:
 	var audio_files = DirAccess.open(audio_files_path).get_files()
 	print(audio_files)
 	for file in audio_files:
-		if file.length() > 6 and (file.substr(file.length()-4, file.length()) == ".mp3" or file.substr(file.length()-4, file.length()) == ".wav"):
+		if file.length() > 6 and file.substr(file.length()-4, file.length()) == ".mp3":
 			if file.substr(0, 6) == "music_":
 				var sub = file.substr(6, file.length())
 				audio_library.add_sound(sub.substr(0, sub.length()-4), audio_files_path + file, true)
@@ -37,6 +37,7 @@ func play_sound_from_tag(tag: String) -> void:
 		var audio = audio_library.grab(tag)
 		if audio.isMusic:
 			if $BGMusicPlayer.playing: $BGMusicPlayer.stop()
+			audio.stream.loop = true
 			$BGMusicPlayer.stream = audio.stream
 			$BGMusicPlayer.play()
 		else:

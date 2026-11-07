@@ -60,13 +60,14 @@ text = "Kat Calcagno"
 
 [node name="Label" type="Label" parent="Kat" unique_id=1457556754]
 layout_mode = 0
-offset_left = -2.0
-offset_top = 21.0
-offset_right = 85.0
-offset_bottom = 44.0
+offset_left = -1.0
+offset_top = 20.0
+offset_right = 86.0
+offset_bottom = 43.0
 theme_override_fonts/font = ExtResource("2_gpyyd")
 theme_override_font_sizes/font_size = 10
-text = "<Scripter & Design>"
+text = "<Scripter & Art>"
+horizontal_alignment = 1
 
 [node name="Brett" type="Label" parent="." unique_id=110331291]
 offset_left = 92.0
@@ -100,13 +101,13 @@ text = "Anthony Lopez"
 
 [node name="Label2" type="Label" parent="Tony" unique_id=1930668459]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 21.0
-offset_right = 71.0
-offset_bottom = 32.0
+offset_left = 2.0
+offset_top = 20.0
+offset_right = 89.0
+offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("2_gpyyd")
 theme_override_font_sizes/font_size = 10
-text = "<Sound fx>"
+text = "<Sound fx & Music>"
 horizontal_alignment = 1
 
 [node name="Creditsbackbutton" type="Button" parent="." unique_id=462344885]
