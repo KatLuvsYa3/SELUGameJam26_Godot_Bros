@@ -7,6 +7,27 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_lrf63"]
 
+[sub_resource type="FontFile" id="FontFile_b136p"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/6/0/ascent = 0.0
+cache/0/6/0/descent = 0.0
+cache/0/6/0/underline_position = 0.0
+cache/0/6/0/underline_thickness = 0.0
+cache/0/6/0/scale = 1.0
+
 [node name="Node2D" type="Node2D" unique_id=2049887063]
 script = ExtResource("1_nlafn")
 
@@ -20,6 +41,16 @@ offset_bottom = 144.0
 mouse_filter = 2
 texture = SubResource("CanvasTexture_lrf63")
 
+[node name="Label4" type="Label" parent="." unique_id=69048405]
+offset_left = 67.0
+offset_top = 65.0
+offset_right = 253.0
+offset_bottom = 98.0
+theme_override_fonts/font = SubResource("FontFile_b136p")
+theme_override_font_sizes/font_size = 6
+text = "    Everytime you cast a special spell, a 6-sided die roles which determines how powerful the spell actually is. Your character shoots where your mouse is pointing at."
+autowrap_mode = 2
+
 [node name="StartButton" type="Button" parent="." unique_id=847825491]
 offset_left = 183.0
 offset_top = 109.0
@@ -31,18 +62,34 @@ text = "Start"
 flat = true
 
 [node name="Label" type="Label" parent="." unique_id=1063230635]
-offset_left = 102.0
+offset_left = 68.0
 offset_top = 3.0
-offset_right = 147.0
+offset_right = 179.0
 offset_bottom = 26.0
 theme_override_fonts/font = ExtResource("2_d3pco")
 theme_override_font_sizes/font_size = 20
-text = "Rules"
+text = "How To Play"
 
 [node name="Label2" type="Label" parent="." unique_id=1498233081]
-offset_left = 65.0
-offset_top = 31.0
-offset_right = 105.0
-offset_bottom = 54.0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 59.0
+offset_bottom = 99.0
 theme_override_fonts/font = ExtResource("2_d3pco")
 theme_override_font_sizes/font_size = 10
+text = "Movement:
+Up = W
+Down = S
+Left = A
+Right = D
+Dash = Space"
+
+[node name="Label3" type="Label" parent="." unique_id=1832232523]
+offset_left = 63.0
+offset_top = 28.0
+offset_right = 190.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("2_d3pco")
+theme_override_font_sizes/font_size = 10
+text = "regular spell = mouse button 1
+special cast = mouse button 2"
