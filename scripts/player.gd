@@ -1,7 +1,9 @@
 extends Node2D
 
 var last_rotation = 0
-@onready var player: Sprite2D = $Player
+@onready var player: Sprite2D = $Area2D/Player
+@onready var dash = $Area2D/Player/MistyStepP
+@onready var collision = $Area2D/CollisionShape2D
 
 # movement 
 @export var speed = 1.5
@@ -49,6 +51,7 @@ func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_D):
 		input_dir += Vector2.RIGHT
 	player.position += input_dir.normalized()*((1-delta)*speed)
+	collision.position = player.position
 	#if input_dir == Vector2.ZERO: rotation = last_rotation
 	#else: 
 	#	last_rotation = input_dir.normalized().angle()
@@ -65,7 +68,8 @@ func _process(delta: float) -> void:
 			player.global_position = get_global_mouse_position()
 		else: 
 			player.position += (get_global_mouse_position()-player.global_position).normalized()*dash_distance
-		$Player/MistyStepP.emitting = true
+		dash.emitting = true
+	collision.position = player.position
 	
 	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
 	BaseScript.combat_ui.position = player.position

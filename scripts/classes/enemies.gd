@@ -26,9 +26,9 @@ const enemyDamage = {
 }
 
 const enemySpeed = {
-	Type.MELEE: 1,
+	Type.MELEE: 20,
 	Type.RANGED: 0,
-	Type.TANK: .25
+	Type.TANK: 5,
 }
 
 

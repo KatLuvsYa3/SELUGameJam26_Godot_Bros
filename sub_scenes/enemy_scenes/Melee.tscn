@@ -1,10 +1,18 @@
-[gd_scene format=3 uid="uid://bit4u6jly1a8n"]
+[gd_scene format=3 uid="uid://7ff4ho1suw6f"]
 
 [ext_resource type="Texture2D" uid="uid://ces4wk10dea8h" path="res://sprites/goblin.png" id="1_mq8sj"]
 [ext_resource type="Script" uid="uid://b8p5cmqvv2jlt" path="res://scripts/melee.gd" id="1_tdslv"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qt2xu"]
+
 [node name="Melee" type="Node2D" unique_id=1626383104]
 script = ExtResource("1_tdslv")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=785212684]
+[node name="Area2D" type="Area2D" parent="." unique_id=1574262461]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=785212684]
 texture = ExtResource("1_mq8sj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1138473450]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_qt2xu")

@@ -12,6 +12,7 @@ var combat_ui_scene = preload("res://sub_scenes/combat_ui.tscn").instantiate()
 var player_scene = preload("res://sub_scenes/Player.tscn").instantiate()
 @export var player = null
 
+
 var isincombat_scene = false
 
 # Called when the node enters the scene tree for the first time.
@@ -43,19 +44,27 @@ func place_player(parent, x, y):
 	pos.y = y
 	player.position = pos
 	parent.add_child(player)
+	return player.get_node("Area2D/Player")
+	
 	
 
 func place_enemies(parent: Node2D, spawnPoints: Node2D ):
+	var enemies = []
+
 	for folder in spawnPoints.get_children():
 		if folder.name == "Melee":
 			for marker in folder.get_children():
-				Enemy.spawn(Enemy.Type.MELEE, parent, marker.global_position)
+				enemies.append(Enemy.spawn(Enemy.Type.MELEE, parent, marker.global_position)) 
+				
 		if folder.name == "Tank":
 			for marker in folder.get_children():
-				Enemy.spawn(Enemy.Type.TANK, parent, marker.global_position)
+				enemies.append(Enemy.spawn(Enemy.Type.TANK, parent, marker.global_position))
+				
 		if folder.name == "Ranged":
 			for marker in folder.get_children():
-				Enemy.spawn(Enemy.Type.RANGED, parent, marker.global_position)
+				enemies.append(Enemy.spawn(Enemy.Type.RANGED, parent, marker.global_position))
+				
+	return enemies
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
