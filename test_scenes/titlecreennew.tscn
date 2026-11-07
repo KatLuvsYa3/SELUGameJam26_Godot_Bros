@@ -82,5 +82,3 @@ metadata/_edit_lock_ = true
 z_index = -1
 position = Vector2(128, 72)
 texture = ExtResource("4_fd305")
-
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
