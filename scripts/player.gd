@@ -81,14 +81,14 @@ func _process(delta: float) -> void:
 	
 	check_tile_effects()
 
-func check_tile_effects():
-	# Convert player position to tile map coordinates
-	var cell_pos = tilemap_layer.local_to_map(global_position)
-	
-	# Fetch the data container for the tile at this position
-	var tile_data = tilemap_layer.get_cell_tile_data(cell_pos)
-	
-	if tile_data:
+#func check_tile_effects():
+	## Convert player position to tile map coordinates
+	#var cell_pos = tilemap_layer.local_to_map(global_position)
+	#
+	## Fetch the data container for the tile at this position
+	#var tile_data = tilemap_layer.get_cell_tile_data(cell_pos)
+	#
+	##if tile_data:
 
 var firebolt_scene = preload("res://sub_scenes/spells/Firebolt.tscn")
 
