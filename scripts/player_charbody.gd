@@ -59,6 +59,7 @@ func _physics_process(delta: float) -> void:
 	dash_timer += delta
 	if dash_timer >= dash_cooldown and Input.is_key_pressed(KEY_SPACE):
 		dash_timer = 0
+		BaseScript.audio_controller.play_sound_from_tag("teleport")
 		# move
 		if dash_distance > get_global_mouse_position().distance_to(global_position):
 			velocity = get_global_mouse_position()-global_position*50
@@ -126,8 +127,10 @@ func _input(event):
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if dash_timer > 0.05:
 		if area.has_node("Arrow"):
+			BaseScript.audio_controller.play_sound_from_tag("damage_taken")
 			hp -= 1
 		if area.has_node("Enemy"):
+			BaseScript.audio_controller.play_sound_from_tag("damage_taken")
 			hp -= 1
 			push_vel = (global_position-area.global_position).normalized()*700
 
