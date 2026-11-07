@@ -12,6 +12,7 @@ func roll() -> int:
 	var number = randi_range(1, 6)
 	frame = number-1
 	pause()
+	$Part.emitting = true
 	return frame+1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

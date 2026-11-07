@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://g8y5c6l34wbx" path="res://scripts/d6.gd" id="9_7ry47"]
 [ext_resource type="Script" uid="uid://b33kq58h4wpbs" path="res://scripts/heart_group.gd" id="9_41hxt"]
 [ext_resource type="Texture2D" uid="uid://bhk0b7aabsm75" path="res://sprites/combat_ui/heart.png" id="10_exmyt"]
+[ext_resource type="Texture2D" uid="uid://c3b5cle4om03j" path="res://sprites/diceeffect.png" id="11_bl1dw"]
 [ext_resource type="Texture2D" uid="uid://dg8ou5fidrlxv" path="res://sprites/combat_ui/halfheart.png" id="11_d3adr"]
 [ext_resource type="Texture2D" uid="uid://djtvqmtc30p82" path="res://sprites/combat_ui/mistystep.png" id="11_exmyt"]
 [ext_resource type="Texture2D" uid="uid://7evd52gw1qtq" path="res://sprites/combat_ui/emptyheart.png" id="12_7ry47"]
@@ -72,6 +73,18 @@ position = Vector2(24, 24)
 sprite_frames = SubResource("SpriteFrames_m0i5l")
 animation = &"roll"
 script = ExtResource("9_7ry47")
+
+[node name="Part" type="CPUParticles2D" parent="D6" unique_id=400479851]
+emitting = false
+texture = ExtResource("11_bl1dw")
+lifetime = 0.22
+one_shot = true
+speed_scale = 1.51
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 158.73
+initial_velocity_max = 166.67
 
 [node name="HeartGroup" type="Node2D" parent="." unique_id=796184917]
 script = ExtResource("9_41hxt")
