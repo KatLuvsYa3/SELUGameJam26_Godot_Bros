@@ -21,8 +21,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if start:
-		rotation = player.rotation
-		position = player.global_position
+		rotation = player.get_child(1).get_child(0).rotation
+		position = player.get_child(1).get_child(0).global_position
 		lifetime_timer += delta
 		if lifetime_timer > lifetime: queue_free()
 		visible = true
