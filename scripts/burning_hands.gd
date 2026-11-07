@@ -25,3 +25,4 @@ func _process(delta: float) -> void:
 		position = player.global_position
 		lifetime_timer += delta
 		if lifetime_timer > lifetime: queue_free()
+		visible = true

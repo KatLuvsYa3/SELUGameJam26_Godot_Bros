@@ -3,8 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://beineqms04lv0" path="res://sprites/orc.png" id="1_5etig"]
 [ext_resource type="Script" uid="uid://jaywdur2qjgv" path="res://scripts/tank.gd" id="1_ov5k2"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qt2xu"]
+
 [node name="Tank" type="Node2D" unique_id=371974212]
 script = ExtResource("1_ov5k2")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=815225426]
+[node name="Area2D" type="Area2D" parent="." unique_id=16542314]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=815225426]
 texture = ExtResource("1_5etig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=480509906]
+position = Vector2(-4, 1)
+scale = Vector2(2.3, 2.3)
+shape = SubResource("CircleShape2D_qt2xu")
