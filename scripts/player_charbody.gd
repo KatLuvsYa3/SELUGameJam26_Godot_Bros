@@ -133,7 +133,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			BaseScript.audio_controller.play_sound_from_tag("damage_taken")
 			hp -= 1
 			push_vel = (global_position-area.global_position).normalized()*700
-
+	if area.has_node("Health"):
+		hp+=1
 
 #func _physics_process(delta: float) -> void:
 	## Get the input direction and handle the movement/deceleration.

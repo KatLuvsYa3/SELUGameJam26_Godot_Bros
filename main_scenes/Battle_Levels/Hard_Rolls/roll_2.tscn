@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://dtx22yqslge0w"]
 
-[ext_resource type="Script" uid="uid://cvqyk5k4glh0r" path="res://main_scenes/Battle_Levels/Hard_Rolls/roll_2.gd" id="1_008cv"]
+[ext_resource type="Script" uid="uid://b7t8d0v8oe4p5" path="res://main_scenes/Battle_Levels/Hard_Rolls/roll_1.gd" id="1_008cv"]
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_66heb"]
 [ext_resource type="TileSet" uid="uid://br3m2xhkukpqx" path="res://sprites/levelmap.tres" id="2_66heb"]
+[ext_resource type="PackedScene" uid="uid://uw5vwwx5owi8" path="res://sub_scenes/healthpotion.tscn" id="4_7ilms"]
 
 [node name="Roll2" type="Node2D" unique_id=1318507679]
 script = ExtResource("1_008cv")
@@ -47,3 +48,9 @@ position = Vector2(326, 44)
 position = Vector2(62, 38)
 
 [node name="Holes" type="Node2D" parent="." unique_id=1193491029]
+
+[node name="Healthpotion" parent="." unique_id=853100331 instance=ExtResource("4_7ilms")]
+position = Vector2(191, 185)
+
+[node name="Healthpotion2" parent="." unique_id=1510220939 instance=ExtResource("4_7ilms")]
+position = Vector2(58, 94)
