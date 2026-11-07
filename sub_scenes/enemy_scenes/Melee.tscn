@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bit4u6jly1a8n"]
 
 [ext_resource type="Texture2D" uid="uid://ces4wk10dea8h" path="res://sprites/goblin.png" id="1_mq8sj"]
+[ext_resource type="Script" uid="uid://b8p5cmqvv2jlt" path="res://scripts/melee.gd" id="1_tdslv"]
 
 [node name="Melee" type="Node2D" unique_id=1626383104]
+script = ExtResource("1_tdslv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=785212684]
 texture = ExtResource("1_mq8sj")
