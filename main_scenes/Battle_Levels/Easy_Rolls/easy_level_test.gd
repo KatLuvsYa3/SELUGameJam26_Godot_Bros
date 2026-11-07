@@ -15,4 +15,4 @@ func _ready():
 func _process(delta: float):
 	
 	for enemy in enemies:
-		enemy.Enemy.move(delta, player)
+		enemy.move(delta, player.global_position)

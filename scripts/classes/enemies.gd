@@ -42,7 +42,3 @@ static func spawn(type: Type, parent: Node, pos: Vector2):
 	enemy.global_position = pos
 	return enemy
 	
-
-func move(delta: float, playerpos: Vector2):
-	var direction = global_position.direction_to(playerpos)
-	global_position += direction * 1 * delta
