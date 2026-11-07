@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	# INSTERT COMBAT SCENE FILE
-	BaseScript.start_combat_scene("")
+	BaseScript.start_combat_scene("res://test_scenes/testing_player_controll.tscn")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c6qwoobimhrhu"]
+
+[ext_resource type="Texture2D" uid="uid://df0cjt2xlyf1t" path="res://sprites/range_goblin.png" id="1_b5qf1"]
+
+[node name="Ranger" type="Node2D" unique_id=1722592856]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=642414836]
+texture = ExtResource("1_b5qf1")

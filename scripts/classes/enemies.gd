@@ -6,7 +6,24 @@ var damage: int
 var speed: int
 
 
-func _init(health: int, damage: int, speed: int, ):
-	self.health = health
-	self.damage = damage
-	self.speed = speed
+
+enum Type{
+	MELEE,
+	RANGED,
+	TANK,
+}
+
+const enemyScenes = {
+	Type.MELEE: preload("res://sub_scenes/enemy_scenes/melee.tscn"),
+	Type.RANGED: preload("res://sub_scenes/enemy_scenes/ranged.tscn"),
+	Type.TANK: preload("res://sub_scenes/enemy_scenes/tank.tscn")
+}
+
+static func spawn(type: Type, parent: Node, pos: Vector2):
+	
+	var scene: PackedScene = enemyScenes[type]
+	
+	var enemy = scene.instantiate()
+	parent.add_child(enemy)
+	enemy.global_position = pos
+	return enemy

@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bxirlmvqbt2tg"]
+
+[ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_2jgrd"]
+[ext_resource type="Texture2D" uid="uid://d2llylyfd4oh1" path="res://sprites/combat_ui/dicepanel.png" id="2_nveh0"]
+[ext_resource type="Texture2D" uid="uid://c4u12n55uad4c" path="res://sprites/d6 sprites/1.png" id="3_1d50l"]
+[ext_resource type="Texture2D" uid="uid://cag6hja7ahr58" path="res://sprites/d6 sprites/2.png" id="4_bhf1w"]
+[ext_resource type="Texture2D" uid="uid://c12wd1ppdu35w" path="res://sprites/d6 sprites/3.png" id="5_41hxt"]
+[ext_resource type="Texture2D" uid="uid://bmfyw74eo41q0" path="res://sprites/d6 sprites/4.png" id="6_exmyt"]
+[ext_resource type="Texture2D" uid="uid://mnm1capyorhk" path="res://sprites/d6 sprites/5.png" id="7_3iwyx"]
+[ext_resource type="Texture2D" uid="uid://dfaovm7loumrr" path="res://sprites/d6 sprites/6.png" id="8_d3adr"]
+[ext_resource type="Script" uid="uid://g8y5c6l34wbx" path="res://sub_scenes/d6.gd" id="9_7ry47"]
+[ext_resource type="Script" uid="uid://b33kq58h4wpbs" path="res://scripts/heart_group.gd" id="9_41hxt"]
+[ext_resource type="Texture2D" uid="uid://bhk0b7aabsm75" path="res://sprites/combat_ui/heart.png" id="10_exmyt"]
+[ext_resource type="Texture2D" uid="uid://dg8ou5fidrlxv" path="res://sprites/combat_ui/halfheart.png" id="11_d3adr"]
+[ext_resource type="Texture2D" uid="uid://djtvqmtc30p82" path="res://sprites/combat_ui/mistystep.png" id="11_exmyt"]
+[ext_resource type="Texture2D" uid="uid://7evd52gw1qtq" path="res://sprites/combat_ui/emptyheart.png" id="12_7ry47"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m0i5l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1d50l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bhf1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_41hxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_exmyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3iwyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d3adr")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 30.0
+}]
+
+[node name="CombatUi" type="Node2D" unique_id=798443005]
+z_index = 50
+
+[node name="Viewport Background" type="Sprite2D" parent="." unique_id=356010732]
+visible = false
+z_index = -1
+position = Vector2(128, 72)
+texture = ExtResource("1_2jgrd")
+metadata/_edit_lock_ = true
+
+[node name="Dicepanel" type="Sprite2D" parent="." unique_id=569718954]
+position = Vector2(24, 24)
+texture = ExtResource("2_nveh0")
+
+[node name="D6" type="AnimatedSprite2D" parent="." unique_id=1190115394]
+position = Vector2(24, 24)
+sprite_frames = SubResource("SpriteFrames_m0i5l")
+animation = &"roll"
+script = ExtResource("9_7ry47")
+
+[node name="HeartGroup" type="Node2D" parent="." unique_id=796184917]
+script = ExtResource("9_41hxt")
+
+[node name="1" type="Node2D" parent="HeartGroup" unique_id=1698423480]
+position = Vector2(114, 136)
+
+[node name="full" type="Sprite2D" parent="HeartGroup/1" unique_id=1377354432]
+texture = ExtResource("10_exmyt")
+
+[node name="half" type="Sprite2D" parent="HeartGroup/1" unique_id=1253901224]
+z_index = -1
+texture = ExtResource("11_d3adr")
+
+[node name="empty" type="Sprite2D" parent="HeartGroup/1" unique_id=491530856]
+z_index = -2
+texture = ExtResource("12_7ry47")
+
+[node name="2" type="Node2D" parent="HeartGroup" unique_id=1337179718]
+position = Vector2(130, 136)
+
+[node name="empty" type="Sprite2D" parent="HeartGroup/2" unique_id=720249833]
+z_index = -2
+texture = ExtResource("12_7ry47")
+
+[node name="full" type="Sprite2D" parent="HeartGroup/2" unique_id=1135152973]
+texture = ExtResource("10_exmyt")
+
+[node name="half" type="Sprite2D" parent="HeartGroup/2" unique_id=11266029]
+z_index = -1
+texture = ExtResource("11_d3adr")
+
+[node name="3" type="Node2D" parent="HeartGroup" unique_id=292211430]
+position = Vector2(145, 136)
+
+[node name="half" type="Sprite2D" parent="HeartGroup/3" unique_id=1877999307]
+z_index = -1
+texture = ExtResource("11_d3adr")
+
+[node name="full" type="Sprite2D" parent="HeartGroup/3" unique_id=1383328391]
+texture = ExtResource("10_exmyt")
+
+[node name="empty" type="Sprite2D" parent="HeartGroup/3" unique_id=1756820336]
+z_index = -2
+texture = ExtResource("12_7ry47")
+
+[node name="Mistystep" type="Sprite2D" parent="." unique_id=1258905247]
+position = Vector2(172, 127)
+texture = ExtResource("11_exmyt")

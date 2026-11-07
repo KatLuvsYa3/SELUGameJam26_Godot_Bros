@@ -1,3 +1,50 @@
-[gd_scene format=3 uid="uid://fogcdyh066c4"]
+[gd_scene format=4 uid="uid://fogcdyh066c4"]
+
+[ext_resource type="Script" uid="uid://dtl8gtmlxplxt" path="res://main_scenes/Battle_Levels/Easy_Rolls/easy_level_test.gd" id="1_7m0ni"]
+[ext_resource type="Texture2D" uid="uid://bjwhosdaec4d3" path="res://sprites/tilesetv1.png" id="2_lle16"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_al3f3"]
+texture = ExtResource("2_lle16")
+0:0/0 = 0
+1:0/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qt2xu"]
+sources/0 = SubResource("TileSetAtlasSource_al3f3")
 
 [node name="EasyLevelTest" type="Node2D" unique_id=1768354509]
+script = ExtResource("1_7m0ni")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1426495135]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAACAAMAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAUAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_qt2xu")
+
+[node name="Enemies" type="Node2D" parent="." unique_id=400814012]
+
+[node name="Player" type="Node2D" parent="." unique_id=710478104]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1848754817]
+
+[node name="Melee" type="Node2D" parent="SpawnPoints" unique_id=1708924591]
+
+[node name="Marker2D5" type="Marker2D" parent="SpawnPoints/Melee" unique_id=1175294132]
+position = Vector2(80, 20)
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPoints/Melee" unique_id=1367686013]
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnPoints/Melee" unique_id=88698817]
+position = Vector2(63, 41)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnPoints/Melee" unique_id=856179160]
+position = Vector2(86, 38)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnPoints/Melee" unique_id=267740593]
+position = Vector2(85, 57)
+
+[node name="Ranged" type="Node2D" parent="SpawnPoints" unique_id=644627373]
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPoints/Ranged" unique_id=1517565398]
+position = Vector2(66, 30)
+
+[node name="Tank" type="Node2D" parent="SpawnPoints" unique_id=996038208]

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bxirlmvqbt2tg"]
 
+[ext_resource type="Script" uid="uid://b7wpxyqc78r8" path="res://scripts/combat_ui.gd" id="1_0n2b7"]
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_2jgrd"]
 [ext_resource type="Texture2D" uid="uid://d2llylyfd4oh1" path="res://sprites/combat_ui/dicepanel.png" id="2_nveh0"]
 [ext_resource type="Texture2D" uid="uid://c4u12n55uad4c" path="res://sprites/d6 sprites/1.png" id="3_1d50l"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bmfyw74eo41q0" path="res://sprites/d6 sprites/4.png" id="6_exmyt"]
 [ext_resource type="Texture2D" uid="uid://mnm1capyorhk" path="res://sprites/d6 sprites/5.png" id="7_3iwyx"]
 [ext_resource type="Texture2D" uid="uid://dfaovm7loumrr" path="res://sprites/d6 sprites/6.png" id="8_d3adr"]
+[ext_resource type="Script" uid="uid://g8y5c6l34wbx" path="res://scripts/d6.gd" id="9_7ry47"]
 [ext_resource type="Script" uid="uid://b33kq58h4wpbs" path="res://scripts/heart_group.gd" id="9_41hxt"]
 [ext_resource type="Texture2D" uid="uid://bhk0b7aabsm75" path="res://sprites/combat_ui/heart.png" id="10_exmyt"]
 [ext_resource type="Texture2D" uid="uid://dg8ou5fidrlxv" path="res://sprites/combat_ui/halfheart.png" id="11_d3adr"]
@@ -37,11 +39,12 @@ animations = [{
 }],
 "loop": 1,
 "name": &"roll",
-"speed": 5.0
+"speed": 24.0
 }]
 
 [node name="CombatUi" type="Node2D" unique_id=798443005]
 z_index = 50
+script = ExtResource("1_0n2b7")
 
 [node name="Viewport Background" type="Sprite2D" parent="." unique_id=356010732]
 visible = false
@@ -58,6 +61,7 @@ texture = ExtResource("2_nveh0")
 position = Vector2(24, 24)
 sprite_frames = SubResource("SpriteFrames_m0i5l")
 animation = &"roll"
+script = ExtResource("9_7ry47")
 
 [node name="HeartGroup" type="Node2D" parent="." unique_id=796184917]
 script = ExtResource("9_41hxt")
