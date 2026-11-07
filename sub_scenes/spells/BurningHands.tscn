@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c1irg4y373qy8"]
+
+[ext_resource type="Texture2D" uid="uid://b8h12lkahreng" path="res://sprites/spells/burninghands.png" id="1_3lwl0"]
+[ext_resource type="Script" uid="uid://bm4k4hst0vvgd" path="res://scripts/burning_hands.gd" id="1_kgey7"]
+
+[node name="BurningHands" type="Node2D" unique_id=1176786116]
+z_index = -1
+script = ExtResource("1_kgey7")
+
+[node name="Burninghands" type="Sprite2D" parent="." unique_id=1556243422]
+position = Vector2(28, 0)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_3lwl0")
+
+[node name="Area2D" type="Area2D" parent="Burninghands" unique_id=543295043]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Burninghands/Area2D" unique_id=750856576]
+polygon = PackedVector2Array(16, -1, -23, -25, -24, 25)
