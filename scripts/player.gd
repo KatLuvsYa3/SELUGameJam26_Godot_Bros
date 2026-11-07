@@ -69,7 +69,6 @@ func _process(delta: float) -> void:
 		else: 
 			player.position += (get_global_mouse_position()-player.global_position).normalized()*dash_distance
 		dash.emitting = true
-	collision.position = player.position
 	
 	BaseScript.combat_ui.update_misty(min(dash_timer/dash_cooldown, 1.0))
 	BaseScript.combat_ui.position = player.position
