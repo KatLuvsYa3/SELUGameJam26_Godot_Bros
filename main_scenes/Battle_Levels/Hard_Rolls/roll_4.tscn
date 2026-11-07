@@ -1,9 +1,11 @@
 [gd_scene format=4 uid="uid://cfw1kyh5658ys"]
 
+[ext_resource type="Script" uid="uid://dms16qmbxg0qi" path="res://main_scenes/Battle_Levels/Hard_Rolls/roll_4.gd" id="1_44k57"]
 [ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="1_eex3d"]
 [ext_resource type="TileSet" uid="uid://br3m2xhkukpqx" path="res://sprites/levelmap.tres" id="2_44k57"]
 
 [node name="Roll4" type="Node2D" unique_id=1326294961]
+script = ExtResource("1_44k57")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1642514242]
 
@@ -28,3 +30,5 @@ tile_set = ExtResource("2_44k57")
 [node name="Ranged" type="Node2D" parent="SpawnPoints" unique_id=2041687604]
 
 [node name="Tank" type="Node2D" parent="SpawnPoints" unique_id=82377229]
+
+[node name="Holes" type="Node2D" parent="." unique_id=1621291359]
