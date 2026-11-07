@@ -25,7 +25,7 @@ script = ExtResource("1_vo3rv")
 >>>>>>> Stashed changes
 z_index = 4
 position = Vector2(-6, 0)
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 texture = ExtResource("2_72usq")
 
 [node name="Camera2D" type="Camera2D" parent="Area2D/Player" unique_id=756907425]
