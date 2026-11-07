@@ -13,6 +13,7 @@ var last_rotation = 0
 @export var cantrip_cooldown = 0.2
 @export var cantrip_timer = 0.0
 @export var cantrip_speed = 3
+@export var cantrip_damage = 1
 @export var spell_cooldown = 4.0
 @export var spell_timer = 0.0
 
