@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dmwjdiaq6t00w"]
 
-[ext_resource type="Script" uid="uid://diysk327jqj2u" path="res://scripts/player.gd" id="1_vo3rv"]
 [ext_resource type="Texture2D" uid="uid://dcl0usxcy8fgi" path="res://sprites/player.png" id="2_72usq"]
+[ext_resource type="Script" uid="uid://vro3qwsxbn7k" path="res://scripts/player_charbody.gd" id="2_w17ly"]
 [ext_resource type="Texture2D" uid="uid://btupi2cmt4fqg" path="res://sprites/mistystepsparkle.png" id="3_72usq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_72usq"]
 
 [sub_resource type="Gradient" id="Gradient_w17ly"]
 offsets = PackedFloat32Array(0.10098522, 0.7906404)
@@ -11,22 +13,26 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 [sub_resource type="Gradient" id="Gradient_72usq"]
 offsets = PackedFloat32Array(0, 0.0024630541)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_72usq"]
-
 [node name="Player" type="Node2D" unique_id=962936146]
-script = ExtResource("1_vo3rv")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=243024605]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=590949251]
+script = ExtResource("2_w17ly")
 
-[node name="Player" type="Sprite2D" parent="Area2D" unique_id=1263607671]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=1643108989]
+position = Vector2(-7, 0)
+shape = SubResource("CircleShape2D_72usq")
+
+[node name="Area2D" type="Area2D" parent="Player" unique_id=243024605]
+
+[node name="Player" type="Sprite2D" parent="Player/Area2D" unique_id=1263607671]
 z_index = 4
 position = Vector2(-6, 0)
 scale = Vector2(-1, 1)
 texture = ExtResource("2_72usq")
 
-[node name="Camera2D" type="Camera2D" parent="Area2D/Player" unique_id=756907425]
+[node name="Camera2D" type="Camera2D" parent="Player/Area2D/Player" unique_id=756907425]
 
-[node name="MistyStepP" type="CPUParticles2D" parent="Area2D/Player" unique_id=1821018125]
+[node name="MistyStepP" type="CPUParticles2D" parent="Player/Area2D/Player" unique_id=1821018125]
 z_index = -1
 position = Vector2(-6, 0)
 rotation = -3.1415925
@@ -48,8 +54,8 @@ linear_accel_max = 0.5
 color_ramp = SubResource("Gradient_w17ly")
 color_initial_ramp = SubResource("Gradient_72usq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=912589245]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" unique_id=912589245]
 position = Vector2(-7, 0)
 shape = SubResource("CircleShape2D_72usq")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Player/Area2D" to="." method="_on_area_2d_area_entered"]

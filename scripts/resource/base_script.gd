@@ -47,7 +47,7 @@ func place_player(parent, x, y):
 	pos.y = y
 	player.position = pos
 	parent.add_child(player)
-	return player.get_node("Area2D/Player")
+	return player.get_node("Player")
 	
 	
 

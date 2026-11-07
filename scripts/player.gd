@@ -2,6 +2,7 @@ extends Node2D
 
 var last_rotation = 0
 @onready var player: Sprite2D = $Area2D/Player
+@onready var character_body: Sprite2D = $Area2D/Player
 @onready var dash = $Area2D/Player/MistyStepP
 @onready var collision = $Area2D/CollisionShape2D
 
