@@ -9,7 +9,7 @@ var audio_controller_scene = preload("res://sub_scenes/audio_scene.tscn").instan
 var combat_ui_scene = preload("res://sub_scenes/combat_ui.tscn").instantiate()
 @export var combat_ui = null
 
-var player_scene = preload("res://sub_scenes/Player.tscn").instantiate()
+var player_scene = preload("res://sub_scenes/NewPlayer.tscn").instantiate()
 @export var player = null
 
 

@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://knoypffljmws"]
+
+[ext_resource type="FontFile" path="res://test_scenes/PinyonScript-Regular.ttf" id="1_5m0r5"]
+[ext_resource type="Script" path="res://credits.gd" id="1_gpyyd"]
+[ext_resource type="FontFile" path="res://test_scenes/GothicByte.ttf" id="2_gpyyd"]
+[ext_resource type="Texture2D" uid="uid://cwcpsl65vuahd" path="res://sprites/fade.png" id="3_f3sn6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kqava"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_p4o8g"]
+
+[node name="Node2D" type="Node2D" unique_id=1932615397]
+script = ExtResource("1_gpyyd")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1219889826]
+modulate = Color(0.210037, 0.42277315, 0.23270017, 1)
+self_modulate = Color(0.32501206, 0, 0.034372117, 1)
+show_behind_parent = true
+material = SubResource("ShaderMaterial_kqava")
+offset_right = 256.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_p4o8g")
+
+[node name="Luke" type="Label" parent="." unique_id=1450005031]
+offset_left = 89.0
+offset_top = 113.0
+offset_right = 161.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("1_5m0r5")
+text = "Luke Vignes"
+
+[node name="Label" type="Label" parent="Luke" unique_id=1249288910]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 18.0
+offset_right = 133.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_gpyyd")
+theme_override_font_sizes/font_size = 10
+text = "<User interface>"
+
+[node name="Credits" type="Label" parent="." unique_id=161748039]
+offset_left = 75.0
+offset_top = 2.0
+offset_right = 176.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("2_gpyyd")
+theme_override_font_sizes/font_size = 27
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="Kat" type="Label" parent="." unique_id=338394512]
+offset_left = 82.0
+offset_top = 83.0
+offset_right = 166.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("1_5m0r5")
+text = "Kat Calcagno"
+
+[node name="Label" type="Label" parent="Kat" unique_id=1457556754]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 20.0
+offset_right = 86.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("2_gpyyd")
+theme_override_font_sizes/font_size = 10
+text = "<Scripter & Art>"
+horizontal_alignment = 1
+
+[node name="Brett" type="Label" parent="." unique_id=110331291]
+offset_left = 92.0
+offset_top = 56.0
+offset_right = 170.0
+offset_bottom = 111.0
+theme_override_fonts/font = ExtResource("1_5m0r5")
+theme_override_font_sizes/font_size = 16
+text = "Brett Core
+"
+
+[node name="Label2" type="Label" parent="Brett" unique_id=913859834]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("2_gpyyd")
+theme_override_font_sizes/font_size = 10
+text = "<Scripter>"
+horizontal_alignment = 1
+
+[node name="Tony" type="Label" parent="." unique_id=1538490593]
+offset_left = 79.0
+offset_top = 26.0
+offset_right = 193.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("1_5m0r5")
+theme_override_font_sizes/font_size = 16
+text = "Anthony Lopez"
+
+[node name="Label2" type="Label" parent="Tony" unique_id=1930668459]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 20.0
+offset_right = 89.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("2_gpyyd")
+theme_override_font_sizes/font_size = 10
+text = "<Sound fx & Music>"
+horizontal_alignment = 1
+
+[node name="Creditsbackbutton" type="Button" parent="." unique_id=462344885]
+offset_left = -6.0
+offset_top = 118.0
+offset_right = 65.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+theme_override_fonts/font = ExtResource("2_gpyyd")
+text = "Back"
+flat = true
+
+[node name="Viewport Background" type="Sprite2D" parent="." unique_id=1997983291]
+visible = false
+z_index = -1
+position = Vector2(128, 72)
+texture = ExtResource("3_f3sn6")
+metadata/_edit_lock_ = true
