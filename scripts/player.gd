@@ -73,6 +73,7 @@ func _process(delta: float) -> void:
 	BaseScript.combat_ui.update_hp(hp)
 	# display spell
 	BaseScript.combat_ui.update_spell(selected_spell)
+	BaseScript.combat_ui.update_spell_cooldown(min(spell_timer/spell_cooldown, 1.0))
 
 var firebolt_scene = preload("res://sub_scenes/spells/Firebolt.tscn")
 
@@ -84,12 +85,14 @@ func cast_cantrip():
 	get_parent().add_child(new_firebolt)
 
 func cast_spell():
+	var power = await BaseScript.combat_ui.roll()
 	var spell = selected_spell_scene.instantiate()
+	spell.set_power(power)
 	spell.player = get_child(0)
 	get_parent().add_child(spell)
+	spell.start = true
 
 func _input(event):
-	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
 		if spell_timer > spell_cooldown and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			cast_spell()

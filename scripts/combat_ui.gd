@@ -6,13 +6,16 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func roll() -> int:
-	return $D6.roll()
+	return await $D6.roll()
 
 func update_misty(percent):
 	$Mistystep.modulate.a = percent
 
 func update_hp(hp):
 	$HeartGroup.set_hp(hp)
+
+func update_spell_cooldown(percentage):
+	$Spellbar.value = percentage
 
 func update_spell(spell):
 	$Spellslot/Burninghands.visible = false
