@@ -18,7 +18,11 @@ script = ExtResource("1_vo3rv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=243024605]
 
+<<<<<<< Updated upstream
 [node name="Player" type="Sprite2D" parent="Area2D" unique_id=1263607671]
+=======
+[node name="Player" type="Sprite2D" parent="Area2D" unique_id=1311271076]
+>>>>>>> Stashed changes
 z_index = 4
 position = Vector2(-6, 0)
 scale = Vector2(1, -1)
